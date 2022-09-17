@@ -1,25 +1,48 @@
-{
-  "article": {
-    "id": 1234,
-    "identificated-date": 0,
-    "collection-date": 0,
-    "update-date": 0,
-    "posted-date": 0,
-    "japanese-name": "",
-    "scientific-name": "",
+[
+  {
+    "id": 1,
+    "identificated_date": 0,
+    "collection_date": 0,
+    "update_date": 0,
+    "posted_date": 0,
+    "japanese_name": "イカダモ",
+    "scientific_name": "",
     "address": "",
-    "location-information": "",
-    "water-system": "",
+    "location_information": "",
+    "water_system": "",
     "enviroment": "",
-    "enviroment-ditail": "",
-    "user-id": "",
+    "enviroment_ditail": "",
+    "user_id": "",
     "pictures": [],
     "references": [],
     "access": 0,
     "good": 0,
     "comments": {
-      "user-id": [],
+      "user_id": [],
+      "comments": []
+    }
+  },
+  {
+    "id": 1,
+    "identificated_date": 0,
+    "collection_date": 0,
+    "update_date": 0,
+    "posted_date": 0,
+    "japanese_name": "イカダモ",
+    "scientific_name": "",
+    "address": "",
+    "location_information": "",
+    "water_system": "",
+    "enviroment": "",
+    "enviroment_ditail": "",
+    "user_id": "",
+    "pictures": [],
+    "references": [],
+    "access": 0,
+    "good": 0,
+    "comments": {
+      "user_id": [],
       "comments": []
     }
   }
-}
+]

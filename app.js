@@ -23,15 +23,14 @@ function get_article_data() {
           articles_data.push({
             good: json[i].good,
             id: json[i].id,
-            japanese_name: json[i].japanese_name,
-            scientific_name: json[i].scientific_name,
             enviroment: json[i].enviroment,
             address: json[i].address,
             update_date: json[i].update_date,
             posted_date: json[i].posted_date,
             user_name: json[i].user_name,
             title: json[i].title,
-            pictures: json[i].pictures.slice(0, 4)
+            pictures: json[i].pictures.slice(0, 4),
+            url: "./text.html?=" + json[i].id,
           });
         }
 

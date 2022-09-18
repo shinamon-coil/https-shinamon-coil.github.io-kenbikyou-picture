@@ -33,7 +33,11 @@
     </nav>
     <main>
       <div id="app" class="article-bundle">
-        <article v-for="article in articles" class="article-main">
+        <article
+          v-for="article in articles"
+          class="article-main"
+          v-model="article"
+        >
           <div class="article-information">
             <div class="basic-information">
               <p class="user-information">{{article.user_name}}</p>
@@ -42,7 +46,9 @@
                 <p class="sub-information">更新日:{{article.update_date}}</p>
               </div>
               <h1 class="title-article">
-                <a href="" class="title-link">{{article.title}}</a>
+                <a v-bind:href="article.url" class="title-link"
+                  >{{article.title}}</a
+                >
               </h1>
               <div class="link-image"></div>
               <div class="information-bundle">

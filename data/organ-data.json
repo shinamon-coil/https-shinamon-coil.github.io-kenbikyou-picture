@@ -1,14 +1,18 @@
 [
   {
-    "id": 1,
-    "title": "ミカズキモ属の１種を〇〇池で採取。",
+    "id": 0,
+    "title": "〇〇池で採取。〇〇が多かったです。",
     "user_name": "shinamon-coil",
     "identificated_date": 0,
     "collection_date": 0,
     "update_date": 0,
     "posted_date": 20000525,
-    "japanese_name": "ミカズキモ属の１種",
-    "scientific_name": "",
+    "japanese_name": [
+      "ミカズキモ属"
+    ],
+    "scientific_name": [
+      "Closterium sp."
+    ],
     "address": "大阪府",
     "location_information": "",
     "water_system": "",
@@ -16,10 +20,18 @@
     "enviroment_ditail": "",
     "user_id": "",
     "pictures": [
-      "000000000001",
-      "000000000002"
+      "./data/pictures/000000000001.jpg",
+      "./data/pictures/000000000002.jpg",
+      "./data/pictures/000000000001.jpg",
+      "./data/pictures/000000000002.jpg",
+      "./data/pictures/000000000001.jpg",
+      "./data/pictures/000000000002.jpg"
     ],
-    "references": [],
+    "references": {
+      "isbm": [],
+      "atart_page": [],
+      "end_page": []
+    },
     "access": 0,
     "good": 0,
     "comments": {
@@ -29,22 +41,37 @@
   },
   {
     "id": 0,
-    "title": "ミカズキモ属の１種を〇〇池で採取。",
+    "title": "〇〇池で採取。〇〇が印象的でした。",
     "user_name": "shinamon-coil",
     "identificated_date": 0,
     "collection_date": 0,
-    "update_date": 20220521,
-    "posted_date": 20220521,
-    "japanese_name": "イカダモ",
-    "scientific_name": "",
-    "address": "",
+    "update_date": 20211212,
+    "posted_date": 20000525,
+    "japanese_name": [
+      "ミカズキモ属"
+    ],
+    "scientific_name": [
+      "Closterium sp."
+    ],
+    "address": "大阪府",
     "location_information": "",
     "water_system": "",
-    "enviroment": "",
+    "enviroment": "池",
     "enviroment_ditail": "",
     "user_id": "",
-    "pictures": [],
-    "references": [],
+    "pictures": [
+      "./data/pictures/000000000001.jpg",
+      "./data/pictures/000000000002.jpg",
+      "./data/pictures/000000000001.jpg",
+      "./data/pictures/000000000002.jpg",
+      "./data/pictures/000000000001.jpg",
+      "./data/pictures/000000000002.jpg"
+    ],
+    "references": {
+      "isbm": [],
+      "atart_page": [],
+      "end_page": []
+    },
     "access": 0,
     "good": 0,
     "comments": {
@@ -53,23 +80,38 @@
     }
   },
   {
-    "id": 2,
-    "title": "ミカズキモ属の１種を〇〇池で採取。",
+    "id": 0,
+    "title": "〇〇池で採取。〇〇が印象的でした。",
     "user_name": "shinamon-coil",
     "identificated_date": 0,
     "collection_date": 0,
-    "update_date": 20220521,
-    "posted_date": 20220521,
-    "japanese_name": "イカダモ",
-    "scientific_name": "",
-    "address": "",
+    "update_date": 20211212,
+    "posted_date": 20000525,
+    "japanese_name": [
+      "ミカズキモ属"
+    ],
+    "scientific_name": [
+      "Closterium sp."
+    ],
+    "address": "大阪府",
     "location_information": "",
     "water_system": "",
-    "enviroment": "",
+    "enviroment": "池",
     "enviroment_ditail": "",
     "user_id": "",
-    "pictures": [],
-    "references": [],
+    "pictures": [
+      "./data/pictures/000000000001.jpg",
+      "./data/pictures/000000000002.jpg",
+      "./data/pictures/000000000001.jpg",
+      "./data/pictures/000000000002.jpg",
+      "./data/pictures/000000000001.jpg",
+      "./data/pictures/000000000002.jpg"
+    ],
+    "references": {
+      "isbm": [],
+      "atart_page": [],
+      "end_page": []
+    },
     "access": 0,
     "good": 0,
     "comments": {
@@ -78,23 +120,38 @@
     }
   },
   {
-    "id": 4,
-    "title": "ミカズキモ属の１種を〇〇池で採取。",
+    "id": 0,
+    "title": "〇〇池で採取。〇〇が印象的でした。",
     "user_name": "shinamon-coil",
     "identificated_date": 0,
     "collection_date": 0,
-    "update_date": 20220521,
-    "posted_date": 20220521,
-    "japanese_name": "イカダモ",
-    "scientific_name": "",
-    "address": "",
+    "update_date": 20211212,
+    "posted_date": 20000525,
+    "japanese_name": [
+      "ミカズキモ属"
+    ],
+    "scientific_name": [
+      "Closterium sp."
+    ],
+    "address": "大阪府",
     "location_information": "",
     "water_system": "",
-    "enviroment": "",
+    "enviroment": "池",
     "enviroment_ditail": "",
     "user_id": "",
-    "pictures": [],
-    "references": [],
+    "pictures": [
+      "./data/pictures/000000000001.jpg",
+      "./data/pictures/000000000002.jpg",
+      "./data/pictures/000000000001.jpg",
+      "./data/pictures/000000000002.jpg",
+      "./data/pictures/000000000001.jpg",
+      "./data/pictures/000000000002.jpg"
+    ],
+    "references": {
+      "isbm": [],
+      "atart_page": [],
+      "end_page": []
+    },
     "access": 0,
     "good": 0,
     "comments": {
@@ -103,23 +160,38 @@
     }
   },
   {
-    "id": 3,
-    "title": "ミカズキモ属の１種を〇〇池で採取。",
+    "id": 0,
+    "title": "〇〇池で採取。〇〇が印象的でした。",
     "user_name": "shinamon-coil",
     "identificated_date": 0,
     "collection_date": 0,
-    "update_date": 20220521,
-    "posted_date": 20220521,
-    "japanese_name": "イカダモ",
-    "scientific_name": "",
-    "address": "",
+    "update_date": 20211212,
+    "posted_date": 20000525,
+    "japanese_name": [
+      "ミカズキモ属"
+    ],
+    "scientific_name": [
+      "Closterium sp."
+    ],
+    "address": "大阪府",
     "location_information": "",
     "water_system": "",
-    "enviroment": "",
+    "enviroment": "池",
     "enviroment_ditail": "",
     "user_id": "",
-    "pictures": [],
-    "references": [],
+    "pictures": [
+      "./data/pictures/000000000001.jpg",
+      "./data/pictures/000000000002.jpg",
+      "./data/pictures/000000000001.jpg",
+      "./data/pictures/000000000002.jpg",
+      "./data/pictures/000000000001.jpg",
+      "./data/pictures/000000000002.jpg"
+    ],
+    "references": {
+      "isbm": [],
+      "atart_page": [],
+      "end_page": []
+    },
     "access": 0,
     "good": 0,
     "comments": {

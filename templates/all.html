@@ -11,6 +11,7 @@
     <script>
       $(function () {
         $("#header").load("./templates/header.html");
+        $("#nav").load("./templates/nav.html");
         $("#head").load("./templates/head.html");
         $("#footer").load("./templates/footer.html");
       });
@@ -20,47 +21,15 @@
   <body>
     <div id="header"></div>
     <nav>
-      <ul class="main-navi">
-        <li class="opened"><a href="index.html">最新</a></li>
-        <!---
-        <li><a href="">地域</a></li>
-        <li><a href="">生物</a></li>
-        <li><a href="">環境</a></li>
-        <li><a href="">記事</a></li>
-        --->
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
+      <div id="nav"></div>
     <main>
       <div id="app" class="article-bundle">
         <article v-for="article in articles" class="article-main">
-          <div class="article-information">
-            <div class="basic-information">
-              <p class="user-information">{{article.user_name}}</p>
-              <div class="information-bundle">
-                <p class="sub-information">投稿日:{{article.posted_date}}</p>
-                <p class="sub-information">更新日:{{article.update_date}}</p>
-              </div>
-              <h1 class="title-article">
-                <a href="" class="title-link">{{article.title}}</a>
-              </h1>
-              <div class="link-image"></div>
-              <div class="information-bundle">
-                <p class="sub-information">採取場所:{{article.address}}</p>
-                <p class="sub-information">環境:{{article.enviroment}}</p>
-              </div>
-            </div>
-            <div
-              class="pictures-main"
-              v-for=" picture in article.pictures"
-              v-model="picture"
-            >
-              <img v-bind:src="picture" />
-            </div>
-          </div>
+
         </article>
       </div>
       <script src="./app.js"></script>
+      <!--
       <aside class="sidebar-main">
         <article class="aside">
           <h1 class="title-article">ランキング</h1>
@@ -75,6 +44,7 @@
           <section><h1 class="title-section">その１</h1></section>
         </article>
       </aside>
+      --->
     </main>
     <div id="footer"></div>
   </body>

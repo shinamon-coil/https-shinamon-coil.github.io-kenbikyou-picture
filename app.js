@@ -2,7 +2,6 @@ new Vue({
   el: "#app",
   data: {
     articles: get_article_data(),
-    main_image_src: "./data/pictures/000000000001.jpg"
   },
   methods: {
   },
@@ -25,14 +24,27 @@ function get_article_data() {
             good: json[i].good,
             id: json[i].id,
             japanese_name: json[i].japanese_name,
+            scientific_name: json[i].scientific_name,
+            enviroment: json[i].enviroment,
+            address: json[i].address,
             update_date: json[i].update_date,
             posted_date: json[i].posted_date,
             user_name: json[i].user_name,
             title: json[i].title,
+            pictures: json[i].pictures.slice(0, 4)
           });
         }
+
+        var i = 0;
+        for (article in articles_data) {
+          console.log(article.update_date);
+          articles_data[i].update_date = article.update_date < 0 ? "--" : article.update_date
+          i++;
+        }
+
         articles_data.sort((a, b) => (a.id < b.id ? -1 : 1))
         console.log(articles_data);
+
 
       }
     );

@@ -30,43 +30,26 @@
       </ul>
     </nav>
     <main>
-      <div class="article-bundle">
-        <script src="./show_popular_picture.js"></script>
-        <article class="article-main">
-          <p class="user-information">shinamon-coil</p>
+      <div id="app" class="article-bundle">
+        <article v-for="article in articles" class="article-main">
+          <p class="user-information">{{article.user_name}}</p>
           <div class="information-bundle">
-            <p class="sub-information">投稿日:</p>
-            <p class="sub-information">更新日:</p>
+            <p class="sub-information">投稿日:{{article.posted_date}}</p>
+            <p class="sub-information">更新日:{{article.update_date}}</p>
           </div>
           <h1 class="title-article">
             <a href="" class="title-link">その１</a>
           </h1>
-          <img src="" alt="" />
+          <img v-bind:src="main_image_src" alt="" />
           <div class="information-bundle">
             <p class="sub-information">採取場所:</p>
             <p class="sub-information">環境:</p>
-            <p class="sub-information">和名:</p>
-            <p class="sub-information">学名:</p>
-          </div>
-        </article>
-        <article class="article-main">
-          <p class="user-information">shinamon-coil</p>
-          <div class="information-bundle">
-            <p class="sub-information">投稿日:</p>
-            <p class="sub-information">更新日:</p>
-          </div>
-          <h1 class="title-article">
-            <a href="" class="title-link">その１</a>
-          </h1>
-          <img src="" alt="" />
-          <div class="information-bundle">
-            <p class="sub-information">採取場所:</p>
-            <p class="sub-information">環境:</p>
-            <p class="sub-information">和名:</p>
+            <p class="sub-information">和名:{{article.japanese_name}}</p>
             <p class="sub-information">学名:</p>
           </div>
         </article>
       </div>
+      <script src="./app.js"></script>
 
       <aside class="sidebar-main">
         <article class="aside">

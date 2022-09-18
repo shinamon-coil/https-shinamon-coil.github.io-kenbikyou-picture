@@ -118,7 +118,12 @@ h1 {
 }
 
 footer {
-  background-color: var(--border-color);
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+  padding: 50px 0;
+  background-color: var(--main-bg-color);
+  color: white;
 }
 
 @media screen and (min-width: 540px) and (max-width: 840px) {

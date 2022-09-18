@@ -28,6 +28,7 @@ function get_article_data() {
             update_date: json[i].update_date,
             posted_date: json[i].posted_date,
             user_name: json[i].user_name,
+            title: json[i].title,
           });
         }
 

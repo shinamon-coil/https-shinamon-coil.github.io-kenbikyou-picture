@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "title": "ミカズキモ属の１種を〇〇池で採取。",
     "user_name": "shinamon-coil",
     "identificated_date": 0,
     "collection_date": 0,
@@ -28,6 +29,7 @@
   },
   {
     "id": 0,
+    "title": "ミカズキモ属の１種を〇〇池で採取。",
     "user_name": "shinamon-coil",
     "identificated_date": 0,
     "collection_date": 0,

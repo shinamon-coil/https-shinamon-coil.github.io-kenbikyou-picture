@@ -65,6 +65,11 @@ h1.title-article {
   font-size: 20px;
 }
 
+img {
+  width: 20%;
+  padding-left: 30px;
+}
+
 .sub-information {
   color: darkgray;
   padding-left: 10px;

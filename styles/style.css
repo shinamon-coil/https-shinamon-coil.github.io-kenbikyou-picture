@@ -38,7 +38,7 @@ ul.main-navi li {
   width: 27%;
 }
 
-ul.main-navi li.opend {
+ul.main-navi li.opened {
   border-bottom: solid 5px var(--border-color);
 }
 

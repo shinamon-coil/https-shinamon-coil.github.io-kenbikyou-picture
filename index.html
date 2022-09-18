@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>顕微鏡写真SNS</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="styles/EricMeyer’sCSSreset.css"
-    />
-    <link rel="stylesheet" type="text/css" href="styles/style.css" />
-    <title>Document</title>
+    <script>
+      $(function () {
+        $("#header").load("./templates/header.html");
+        $("#head").load("./templates/head.html");
+        $("#footer").load("./templates/footer.html");
+      });
+    </script>
   </head>
+  <div id="head"></div>
   <body>
-    <header>
-      <h1>顕微鏡写真SNS（ベータ版）</h1>
-    </header>
+    <div id="header"></div>
     <nav>
       <ul class="main-navi">
-        <li class="opend"><a href="index.html">最新</a></li>
+        <li class="opened"><a href="index.html">最新</a></li>
         <!---
         <li><a href="">地域</a></li>
         <li><a href="">生物</a></li>
@@ -52,7 +52,6 @@
         </article>
       </div>
       <script src="./app.js"></script>
-
       <!--
       <aside class="sidebar-main">
         <article class="aside">
@@ -70,8 +69,6 @@
       </aside>
       --->
     </main>
-    <footer>
-      <p>© shinamon-coil. 2022.</p>
-    </footer>
+    <div id="footer"></div>
   </body>
 </html>

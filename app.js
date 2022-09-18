@@ -20,7 +20,7 @@ function get_article_data() {
   })
     .then(
       function (json) {
-        for (var i = 0; i < json.length; i++) {
+        for (var i = 0; (i < json.length) && (i < 5); i++) {
           articles_data.push({
             good: json[i].good,
             id: json[i].id,
@@ -31,9 +31,10 @@ function get_article_data() {
             title: json[i].title,
           });
         }
+        articles_data.sort((a, b) => (a.id < b.id ? -1 : 1))
+        console.log(articles_data);
 
       }
-
     );
   return articles_data
 }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>MicroSNS</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("../templates/header.html");
+        $("#head").load("../templates/head.html");
+        $("#nav").load("../templates/nav.html");
+        $("#footer").load("../templates/footer.html");
+      });
+    </script>
+  </head>
+  <div id="head"></div>
+  <body>
+    <div id="header"></div>
+    <div id="nav"></div>
+    <main>
+      <div id="text"  class="article-bundle">
+        <article>
+          <section>
+          <div class="article-information">
+            <div class="basic-information">
+              <p class="user-information">{{textData.user_name}}</p>
+              <div class="information-bundle">
+                <p class="sub-information">投稿日:{{textData.posted_date}}</p>
+                <p class="sub-information">更新日:{{textData.update_date}}</p>
+              </div>
+              <h1 class="title-article-in-text">
+                <a v-bind:href="textData.url" class="title-link"
+                  >{{textData.title}}</a
+                >
+              </h1>
+              <div class="link-image"></div>
+              <div class="information-bundle">
+                <p class="sub-information">採取場所:{{textData.address}}</p>
+                <p class="sub-information">環境:{{textData.environment}}</p>
+              </div>
+            </div>
+            </section>
+
+            <section>
+              <h1 class="section-title-in-text">概要</h1>
+            </section>
+            <section>
+              <h1 class="section-title-in-text">環境</h1>
+            </section>
+            <section>
+              <h1 class="section-title-in-text">採取生物リスト</h1>
+            </section>
+            <section>
+              <h1 class="section-title-in-text">顕微鏡写真</h1>
+            </section>
+
+        </article>
+        <article>
+        <h1 class="title-article-in-text">コメント</h1>
+        </article>
+      </div>
+      <script src="./text.js"></script>
+      <aside class="sidebar-main">
+        <article class="aside table-of-contents" >
+          <h1 class="title-article">目次</h1>
+          <ul>
+            <li>概要</li>
+            <li>環境</li>
+            <li>採取生物リスト</li>
+            <li>顕微鏡写真</li>
+          </ul>
+          </section>
+        </article>
+      </aside>
+    </main>
+    <div id="footer"></div>
+  </body>
+</html>

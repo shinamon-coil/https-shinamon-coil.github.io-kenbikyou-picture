@@ -138,6 +138,10 @@ h1 {
   font-weight: bold;
 }
 
+p{
+  padding-left: 20px;
+}
+
 .table-of-contents ul li{
   text-decoration: none;
   padding-left: 20px;

@@ -44,6 +44,7 @@ function PushTextData(json, textId) {
     title: json[textId].title,
     url: "./text.html?=" + json[textId].id,
     pictures: json[textId].pictures,
+    abstract: json[textId].abstract,
   });
   return textData;
 }

@@ -1,17 +1,6 @@
-new Vue({
-  el: "#app",
-  data: {
-    articles: get_article_data(),
-  },
-  methods: {
-  },
-  computed: {
-  },
+ShowPage()
 
-})
-
-function get_article_data() {
-  let articles_data = [];
+function ShowPage() {
   $.ajax({
     type: 'GET',
     url: './data/organ-data.json',
@@ -19,6 +8,7 @@ function get_article_data() {
   })
     .then(
       function (json) {
+        let articles_data = [];
         for (let i = 0; (i < json.length) && (i < 5); i++) {
           articles_data.push({
             good: json[i].good,
@@ -32,16 +22,28 @@ function get_article_data() {
             pictures: json[i].pictures.slice(0, 4),
             url: "./text.html?=" + json[i].id,
           });
+
         }
 
         let i = 0;
-        for (article in articles_data) {
+        for (let article in articles_data) {
           articles_data[i].update_date = article.update_date < 0 ? "--" : article.update_date
           i++;
         }
 
         articles_data.sort((a, b) => (a.id < b.id ? -1 : 1))
 
+        new Vue({
+          el: "#app",
+          data: {
+            articles: articles_data,
+          },
+          methods: {
+          },
+          computed: {
+          },
+
+        })
 
       }
     );

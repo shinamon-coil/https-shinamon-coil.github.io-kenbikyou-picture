@@ -31,43 +31,42 @@
     </nav>
     <main>
       <div id="app" class="article-bundle">
-        <article
-          v-for="article in articles"
-          class="article-main"
-          v-model="article"
-        >
-          <div class="article-information">
-            <div class="basic-information">
-              <p class="user-information">{{article.user_name}}</p>
-              <div class="information-bundle">
-                <p class="sub-information">投稿日:{{article.posted_date}}</p>
-                <p class="sub-information">更新日:{{article.update_date}}</p>
+        <article v-for="article in articles" class="article-main">
+          <section>
+            <div class="article-information">
+              <div class="basic-information">
+                <p class="user-information">{{article.user_name}}</p>
+                <div class="information-bundle">
+                  <p class="sub-information">投稿日:{{article.posted_date}}</p>
+                  <p class="sub-information">更新日:{{article.update_date}}</p>
+                </div>
+                <h1 class="title-article">
+                  <a v-bind:href="article.url" class="title-link"
+                    >{{article.title}}</a
+                  >
+                </h1>
+                <div class="link-image"></div>
+                <div class="information-bundle">
+                  <p class="sub-information">採取場所:{{article.address}}</p>
+                  <p class="sub-information">環境:{{article.environment}}</p>
+                </div>
               </div>
-              <h1 class="title-article">
-                <a v-bind:href="article.url" class="title-link"
-                  >{{article.title}}</a
-                >
-              </h1>
-              <div class="link-image"></div>
-              <div class="information-bundle">
-                <p class="sub-information">採取場所:{{article.address}}</p>
-                <p class="sub-information">環境:{{article.environment}}</p>
+              <div class="pictures-main">
+                <img
+                  v-for=" picture in article.pictures"
+                  v-bind:src="picture"
+                />
               </div>
             </div>
-            <div
-              class="pictures-main"
-              v-for=" picture in article.pictures"
-              v-model="picture"
-            >
-              <img v-bind:src="picture" />
-            </div>
-          </div>
+          </section>
         </article>
       </div>
       <script src="./app.js"></script>
       <aside class="sidebar-main">
         <article class="aside">
-          <h1 class="title-sidebar">ランキング</h1>
+          <section>
+            <h1 class="title-sidebar">ランキング</h1>
+          </section>
           <section><h1 class="title-section">登録生物ランキング</h1></section>
           <section><h1 class="title-section">登録地域ランキング</h1></section>
           <section>
@@ -75,7 +74,9 @@
           </section>
         </article>
         <article class="aside">
-          <h1 class="title-sidebar">おすすめ記事</h1>
+          <section>
+            <h1 class="title-sidebar">おすすめ記事</h1>
+          </section>
           <section><h1 class="title-section">その１</h1></section>
         </article>
       </aside>

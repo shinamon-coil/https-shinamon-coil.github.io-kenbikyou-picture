@@ -62,22 +62,27 @@ article {
   background-color: white;
 }
 
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #333;
+}
+
 /*article h1*/
 h1.title-article {
-  padding-left: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 20px;
 }
 
 h1.title-sidebar {
-  padding-left: 20px;
-  padding-top: 20px;
   font-size: 20px;
 }
 
 h1.title-article-in-text{
-  padding-left: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 30px;
@@ -88,16 +93,29 @@ img {
   padding: 10px;
 }
 
+.pictures-main{
+  display: flex;
+}
+
+.picture-gallery{
+  display: flex;
+}
+.picture-and-information img{
+  height: 150;
+}
+.picture-and-information img:hover {
+  height: 400;
+}
+
 .sub-information {
   color: darkgray;
-  padding-left: 20px;
+  padding-left: 0px;
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 10px;
 }
 
 .user-information {
-  padding-left: 20px;
   padding-top: 5px;
   font-size: 15px;
 }
@@ -106,8 +124,9 @@ img {
 }
 
 section {
-  padding: 20px;
-  padding-top: 30px;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-bottom: 20px;
 }
 
 section h1 {
@@ -116,7 +135,6 @@ section h1 {
 
 section h1.section-title-in-text{
   font-size: 25px;
-  padding-left: 20px;
 }
 
 a.title-link {
@@ -144,9 +162,6 @@ h1 {
   font-weight: bold;
 }
 
-p{
-  padding-left: 20px;
-}
 
 .table-of-contents ul li{
   text-decoration: none;
@@ -162,9 +177,6 @@ footer {
   padding: 50px 0;
   background-color: var(--main-bg-color);
   color: white;
-}
-.article-information {
-  display: flex;
 }
 
 @media screen and (min-width: 480px) and (max-width: 840px) {
@@ -193,5 +205,8 @@ footer {
     margin-left: 2%;
     margin-right: 2%;
     width: 22%;
+  }
+  .article-information {
+    display: flex;
   }
 }

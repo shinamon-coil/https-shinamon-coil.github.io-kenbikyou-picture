@@ -47,5 +47,4 @@ function ShowPage() {
 
       }
     );
-  return articles_data
 }

@@ -62,6 +62,7 @@ article {
   background-color: white;
 }
 
+/*TODO 表のデザインを調整。*/
 table {
   border-collapse: collapse;
 }
@@ -89,6 +90,7 @@ h1.title-article-in-text{
     font-size: 30px;
 }
 
+/*写真の列挙方法を調整。*/
 img{
   height: 80px;
   padding-left: 10px;
@@ -100,7 +102,7 @@ img:hover{
 .picture-gallery{
   display: flex;
 }
-
+/* TODO 情報ごとにスペースを入れる。 */
 .sub-information {
   color: darkgray;
   padding-top: 5px;
@@ -130,6 +132,8 @@ section h1 {
 section h1.section-title-in-text{
   font-size: 25px;
 }
+
+/*TODO pタグフォントの調整。*/
 
 a.title-link {
   color: black;

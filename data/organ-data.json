@@ -1,12 +1,12 @@
 [
   {
     "id": 0,
-    "title": "〇〇池で採取。〇〇が多かったです。",
+    "title": "池田市で採取",
     "user_name": "shinamon-coil",
-    "identification_date": 0,
-    "collection_date": 0,
+    "identification_date": 20220419,
+    "collection_date": 20220416,
     "update_date": 0,
-    "posted_date": 20000525,
+    "posted_date": 20220923,
     "japanese_name": [
       "ミカズキモ属"
     ],
@@ -14,12 +14,12 @@
       "Closterium sp."
     ],
     "references_id": [],
-    "address": "大阪府",
+    "address": "大阪府池田市",
     "location_information": "",
     "water_system": "",
-    "environment": "池",
-    "environment_detail": "",
-    "user_id": "",
+    "environment": "水路",
+    "environment_detail": "棚田の水路のコケ。",
+    "user_id": "1",
     "microscope_pictures": [
       {
         "picture": "./data/pictures/000000000001.jpg",
@@ -43,6 +43,6 @@
       "user_id": [],
       "comments": []
     },
-    "abstract": "〇〇池にプランクトンを採取しに行きました。"
+    "abstract": "大阪府の池田市に採取に行った際にプランクトンを採取しました。"
   }
 ]

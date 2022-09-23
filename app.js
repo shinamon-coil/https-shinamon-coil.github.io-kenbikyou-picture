@@ -33,7 +33,7 @@ function ShowPage() {
 
         articles_data.sort((a, b) => (a.id < b.id ? -1 : 1))
 
-        new Vue({
+        new Vue({/*TODO 警告の原因を突き止める。 */
           el: "#app",
           data: {
             articles: articles_data,

@@ -85,31 +85,24 @@ h1.title-sidebar {
 h1.title-article-in-text{
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-right: 10px;
     font-size: 30px;
 }
 
-img {
-  height: 70px;
-  padding: 10px;
+img{
+  height: 80px;
+  padding-left: 10px;
 }
-
-.pictures-main{
-  display: flex;
+img:hover{
+  height: 200px;
 }
 
 .picture-gallery{
   display: flex;
 }
-.picture-and-information img{
-  height: 150;
-}
-.picture-and-information img:hover {
-  height: 400;
-}
 
 .sub-information {
   color: darkgray;
-  padding-left: 0px;
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 10px;
@@ -126,6 +119,7 @@ img {
 section {
   padding-top: 20px;
   padding-left: 30px;
+  padding-right: 30px;
   padding-bottom: 20px;
 }
 

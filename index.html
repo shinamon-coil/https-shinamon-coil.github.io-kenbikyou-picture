@@ -51,10 +51,11 @@
                   <p class="sub-information">環境:{{article.environment}}</p>
                 </div>
               </div>
-              <div class="pictures-main">
+              <div class="pictures-gallery">
                 <img
                   v-for=" picture in article.microscope_pictures"
                   v-bind:src="picture.picture"
+                  v-bind:alt="picture.japanese_name"
                 />
               </div>
             </div>

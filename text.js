@@ -43,7 +43,7 @@ function PushTextData(json, textId) {
     user_name: json[textId].user_name,
     title: json[textId].title,
     url: "./text.html?=" + json[textId].id,
-    pictures: json[textId].pictures,
+    microscope_pictures: json[textId].microscope_pictures,
     abstract: json[textId].abstract,
   });
   return textData;

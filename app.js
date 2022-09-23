@@ -19,7 +19,7 @@ function ShowPage() {
             posted_date: json[i].posted_date,
             user_name: json[i].user_name,
             title: json[i].title,
-            pictures: json[i].pictures.slice(0, 4),
+            microscope_pictures: json[i].microscope_pictures,
             url: "./text.html?=" + json[i].id,
           });
 
@@ -44,7 +44,6 @@ function ShowPage() {
           },
 
         })
-
       }
     );
 }

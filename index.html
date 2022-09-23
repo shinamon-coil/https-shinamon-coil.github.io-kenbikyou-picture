@@ -53,8 +53,8 @@
               </div>
               <div class="pictures-main">
                 <img
-                  v-for=" picture in article.pictures"
-                  v-bind:src="picture"
+                  v-for=" picture in article.microscope_pictures"
+                  v-bind:src="picture.picture"
                 />
               </div>
             </div>

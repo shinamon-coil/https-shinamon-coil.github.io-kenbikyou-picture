@@ -20,13 +20,17 @@
     "environment": "池",
     "environment_detail": "",
     "user_id": "",
-    "pictures": [
-      "./data/pictures/000000000001.jpg",
-      "./data/pictures/000000000002.jpg",
-      "./data/pictures/000000000001.jpg",
-      "./data/pictures/000000000002.jpg",
-      "./data/pictures/000000000001.jpg",
-      "./data/pictures/000000000002.jpg"
+    "microscope_pictures": [
+      {
+        "picture": "./data/pictures/000000000001.jpg",
+        "japanese_name": "ミカヅキモ属",
+        "scientific_name": "Closterium sp."
+      },
+      {
+        "picture": "./data/pictures/000000000002.jpg",
+        "japanese_name": "ミカヅキモ属",
+        "scientific_name": "Closterium sp."
+      }
     ],
     "references": {
       "isbm": [],
@@ -40,165 +44,5 @@
       "comments": []
     },
     "abstract": "〇〇池にプランクトンを採取しに行きました。"
-  },
-  {
-    "id": 1,
-    "title": "〇〇池で採取。〇〇が印象的でした。",
-    "user_name": "shinamon-coil",
-    "identification_date": 0,
-    "collection_date": 0,
-    "update_date": 20211212,
-    "posted_date": 20000525,
-    "japanese_name": [
-      "ミカズキモ属"
-    ],
-    "scientific_name": [
-      "Closterium sp."
-    ],
-    "address": "大阪府",
-    "location_information": "",
-    "water_system": "",
-    "environment": "池",
-    "environment_detail": "",
-    "user_id": "",
-    "pictures": [
-      "./data/pictures/000000000001.jpg",
-      "./data/pictures/000000000002.jpg",
-      "./data/pictures/000000000001.jpg",
-      "./data/pictures/000000000002.jpg",
-      "./data/pictures/000000000001.jpg",
-      "./data/pictures/000000000002.jpg"
-    ],
-    "references": {
-      "isbm": [],
-      "start_page": [],
-      "end_page": []
-    },
-    "access": 0,
-    "good": 0,
-    "comments": {
-      "user_id": [],
-      "comments": []
-    }
-  },
-  {
-    "id": 2,
-    "title": "〇〇池で採取。〇〇が印象的でした。",
-    "user_name": "shinamon-coil",
-    "identification_date": 0,
-    "collection_date": 0,
-    "update_date": 20211212,
-    "posted_date": 20000525,
-    "japanese_name": [
-      "ミカズキモ属"
-    ],
-    "scientific_name": [
-      "Closterium sp."
-    ],
-    "address": "大阪府",
-    "location_information": "",
-    "water_system": "",
-    "environment": "池",
-    "environment_detail": "",
-    "user_id": "",
-    "pictures": [
-      "./data/pictures/000000000001.jpg",
-      "./data/pictures/000000000002.jpg",
-      "./data/pictures/000000000001.jpg",
-      "./data/pictures/000000000002.jpg",
-      "./data/pictures/000000000001.jpg",
-      "./data/pictures/000000000002.jpg"
-    ],
-    "references": {
-      "isbm": [],
-      "start_page": [],
-      "end_page": []
-    },
-    "access": 0,
-    "good": 0,
-    "comments": {
-      "user_id": [],
-      "comments": []
-    }
-  },
-  {
-    "id": 3,
-    "title": "〇〇池で採取。〇〇が印象的でした。",
-    "user_name": "shinamon-coil",
-    "identification_date": 0,
-    "collection_date": 0,
-    "update_date": 20211212,
-    "posted_date": 20000525,
-    "japanese_name": [
-      "ミカズキモ属"
-    ],
-    "scientific_name": [
-      "Closterium sp."
-    ],
-    "address": "大阪府",
-    "location_information": "",
-    "water_system": "",
-    "environment": "池",
-    "environment_detail": "",
-    "user_id": "",
-    "pictures": [
-      "./data/pictures/000000000001.jpg",
-      "./data/pictures/000000000002.jpg",
-      "./data/pictures/000000000001.jpg",
-      "./data/pictures/000000000002.jpg",
-      "./data/pictures/000000000001.jpg",
-      "./data/pictures/000000000002.jpg"
-    ],
-    "references": {
-      "isbm": [],
-      "start_page": [],
-      "end_page": []
-    },
-    "access": 0,
-    "good": 0,
-    "comments": {
-      "user_id": [],
-      "comments": []
-    }
-  },
-  {
-    "id": 4,
-    "title": "〇〇池で採取。〇〇が印象的でした。",
-    "user_name": "shinamon-coil",
-    "identification_date": 0,
-    "collection_date": 0,
-    "update_date": 20211212,
-    "posted_date": 20000525,
-    "japanese_name": [
-      "ミカズキモ属"
-    ],
-    "scientific_name": [
-      "Closterium sp."
-    ],
-    "address": "大阪府",
-    "location_information": "",
-    "water_system": "",
-    "environment": "池",
-    "environment_detail": "",
-    "user_id": "",
-    "pictures": [
-      "./data/pictures/000000000001.jpg",
-      "./data/pictures/000000000002.jpg",
-      "./data/pictures/000000000001.jpg",
-      "./data/pictures/000000000002.jpg",
-      "./data/pictures/000000000001.jpg",
-      "./data/pictures/000000000002.jpg"
-    ],
-    "references": {
-      "isbm": [],
-      "start_page": [],
-      "end_page": []
-    },
-    "access": 0,
-    "good": 0,
-    "comments": {
-      "user_id": [],
-      "comments": []
-    }
   }
 ]

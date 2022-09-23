@@ -76,20 +76,10 @@
             <section>
               <h1 class="section-title-in-text">顕微鏡写真</h1>
               <div class="picture-gallery">
-                <div class="picture-and-information">
-                  <img src="./data/pictures/000000000001.jpg" alt="">
-                  <p>クロレラ属</p>
-                  <p>Chlorella sp.</p>
-                </div>
-                <div>
-                  <img src="./data/pictures/000000000001.jpg" alt="">
-                  <p>クロレラ属</p>
-                  <p>Chlorella sp.</p>
-                </div>
-                <div>
-                  <img src="./data/pictures/000000000001.jpg" alt="">
-                  <p>クロレラ属</p>
-                  <p>Chlorella sp.</p>
+                <div v-for="picture in textData.microscope_pictures" class="picture-and-information">
+                  <img  v-bind:src="picture.picture" alt="">
+                  <p>{{picture.japanese_name}}</p>
+                  <p>{{picture.scientific_name}}</p>
                 </div>
              </div>
             </section>

@@ -102,10 +102,10 @@ img:hover{
 .picture-gallery{
   display: flex;
 }
-/* TODO 情報ごとにスペースを入れる。 */
 .sub-information {
   color: darkgray;
   padding-top: 5px;
+  padding-right: 5px;
   padding-bottom: 5px;
   font-size: 10px;
 }

@@ -7,11 +7,15 @@
     "collection_date": 20220416,
     "update_date": 0,
     "posted_date": 20220923,
-    "japanese_name": [
-      "ミカズキモ属"
-    ],
-    "scientific_name": [
-      "Closterium sp."
+    "organisms_data": [
+      {
+        "japanese_name": "ミカヅキモ属",
+        "scientific_name": "Closterium sp."
+      },
+      {
+        "japanese_name": "ミカヅキモ属",
+        "scientific_name": "Closterium sp."
+      }
     ],
     "references_id": [],
     "address": "大阪府池田市",

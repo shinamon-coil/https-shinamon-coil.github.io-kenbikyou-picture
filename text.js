@@ -34,8 +34,7 @@ function PushTextData(json, textId) {
   textData.push({
     good: json[textId].good,
     id: json[textId].id,
-    japanese_name: json[textId].japanese_name,
-    scientific_name: json[textId].scientific_name,
+    organisms_data: json[textId].organisms_data,
     environment: json[textId].environment,
     address: json[textId].address,
     update_date: json[textId].update_date,

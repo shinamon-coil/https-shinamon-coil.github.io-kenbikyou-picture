@@ -61,17 +61,16 @@
             <section>
               <h1 class="section-title-in-text">採取生物リスト</h1>
               <table>
-              <!--TODO 採取生物リスト表示機能の実装。-->
               <caption>採取生物リスト</caption>
                 <tr>
                   <th>目</th>
                   <th>属</th>
                   <th>学名</th>
                 </tr>
-                <tr>
-                  <td>緑色植物門</td>
-                  <td>クロレラ属</td>
-                  <td>Chlorella sp.</td>
+                <tr v-for="organismData in textData.organisms_data">
+                  <td>{{organismData.scientific_name}}</td>
+                  <td>{{organismData.japanese_name}}</td>
+                  <td>{{organismData.scientific_name}}</td>
                 </tr>
               </table>
             </section>

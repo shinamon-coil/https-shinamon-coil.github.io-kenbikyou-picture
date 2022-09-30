@@ -48,5 +48,55 @@
       "comments": []
     },
     "abstract": "大阪府の池田市に採取に行った際にプランクトンを採取しました。"
+  },
+  {
+    "id": 0,
+    "title": "池田市で採取",
+    "user_name": "shinamon-coil",
+    "identification_date": 20220419,
+    "collection_date": 20220416,
+    "update_date": 0,
+    "posted_date": 20220923,
+    "organisms_data": [
+      {
+        "japanese_name": "ミカヅキモ属",
+        "scientific_name": "Closterium sp."
+      },
+      {
+        "japanese_name": "ミカヅキモ属",
+        "scientific_name": "Closterium sp."
+      }
+    ],
+    "references_id": [],
+    "address": "大阪府池田市",
+    "location_information": "",
+    "water_system": "",
+    "environment": "水路",
+    "environment_detail": "棚田の水路のコケ。",
+    "user_id": "1",
+    "microscope_pictures": [
+      {
+        "picture": "./data/pictures/000000000001.jpg",
+        "japanese_name": "ミカヅキモ属",
+        "scientific_name": "Closterium sp."
+      },
+      {
+        "picture": "./data/pictures/000000000002.jpg",
+        "japanese_name": "ミカヅキモ属",
+        "scientific_name": "Closterium sp."
+      }
+    ],
+    "references": {
+      "isbm": [],
+      "start_page": [],
+      "end_page": []
+    },
+    "access": 0,
+    "good": 0,
+    "comments": {
+      "user_id": [],
+      "comments": []
+    },
+    "abstract": "大阪府の池田市に採取に行った際にプランクトンを採取しました。"
   }
 ]

@@ -4,7 +4,15 @@
   --border-color: #45af2a;
 }
 
-body,
+body {
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
+
 html {
   margin: 0;
   padding: 0;

@@ -61,16 +61,17 @@
             <section>
               <h1 class="section-title-in-text">採取生物リスト</h1>
               <table>
-              <caption>採取生物リスト</caption>
                 <tr>
                   <th>門</th>
                   <th>属</th>
                   <th>学名</th>
+                  <th><button>CSVコピー</button></th>
                 </tr>
                 <tr v-for="organismData in textData.organisms_data">
                   <td>{{organismData.phylum}}</td>
                   <td>{{organismData.japanese_name}}</td>
                   <td>{{organismData.scientific_name}}</td>
+                  <td><button>コピー</button></td>
                 </tr>
               </table>
             </section>
@@ -81,14 +82,38 @@
                   <img class="gallery-picture" v-bind:src="picture.picture" alt="">
                   <p>{{picture.japanese_name}}</p>
                   <p>{{picture.scientific_name}}</p>
+                  <button>ダウンロード</button>
                 </div>
              </div>
+             <button>まとめてダウンロード</button>
             </section>
             <!--TODO 参考文献表示機能の追加。-->
+            <section>
+              <h1 class="section-title-in-text">参考文献</h1>
+              <table>
+                <tr>
+                  <th>書名</th>
+                  <th>ページ</th>
+                  <th>著者</th>
+                  <th>ISBN</th>
+                  <th><button>CSVコピー</button></th>
+                </tr>
+                <tr v-for="organismData in textData.organisms_data">
+                  <td>{{organismData.phylum}}</td>
+                  <td>{{organismData.japanese_name}}</td>
+                  <td>{{organismData.scientific_name}}</td>
+                  <td></td>
+                  <td><button>コピー</button></td>
+                </tr>
+              </table>
+            </section>
 
         </article>
         <article><!--TODO コメント機能の実装-->
-        <h1 class="title-article-in-text">コメント</h1>
+        <section>
+          <h1 class="title-article-in-text">コメント</h1>
+          <p>未実装</p>
+      </section>
         </article>
       </div>
       <script src="./text.js"></script>

@@ -38,11 +38,15 @@
         "scientific_name": "Closterium sp."
       }
     ],
-    "references": {
-      "isbm": [],
-      "start_page": [],
-      "end_page": []
-    },
+    "references": [
+      {
+        "isbn": "",
+        "start_page": "",
+        "end_page": "",
+        "book_name": "",
+        "author": ""
+      }
+    ],
     "access": 0,
     "good": 0,
     "comments": {

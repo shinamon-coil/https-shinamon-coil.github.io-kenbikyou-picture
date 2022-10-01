@@ -42,6 +42,8 @@ nav {
   background-color: var(--main-bg-color);
 }
 
+/*TODO リストのデザイン調整。*/
+
 ul.main-nav {
   display: flex;
   width: 100%;

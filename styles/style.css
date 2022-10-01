@@ -1,7 +1,13 @@
 :root {
-  --main-bg-color: #3fddc1;
-  --warning-bg-color: #d56c06;
-  --border-color: #45af2a;
+  --main-bg-color: #416396;
+  --table-bg-color:#D7E1D0;
+  --information-font-color:darkgray;
+  --table-th-bg-color:#8ED7AB;
+  --warning-bg-color: #F7C3C5;
+  --border-color: #8ED7AB;
+  --background-color:#D7E1D0;
+  /*#FFFFEB*/
+  /*#E9F6A7*/
 }
 
 body {
@@ -17,7 +23,7 @@ html {
   margin: 0;
   padding: 0;
   border: 0;
-  background-color: #f5f6f6;
+  background-color: var(--background-color);
 }
 
 /*header*/
@@ -70,14 +76,22 @@ article {
   background-color: white;
 }
 
-/*TODO 表のデザインを調整。*/
 table {
   border-collapse: collapse;
 }
 
-th,
+th{
+  padding: 10px;
+  background-color: var(--table-th-bg-color);
+}
+
+
 td {
-  border: 1px solid #333;
+  padding: 10px;
+}
+
+tr:nth-child(odd){
+  background-color: var(--table-bg-color);
 }
 
 /*article h1*/
@@ -111,7 +125,7 @@ img:hover{
   display: flex;
 }
 .sub-information {
-  color: darkgray;
+  color: var(--information-font-color);
   padding-top: 5px;
   padding-right: 5px;
   padding-bottom: 5px;

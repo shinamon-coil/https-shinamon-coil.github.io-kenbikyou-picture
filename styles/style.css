@@ -1,0 +1,245 @@
+:root {
+  --main-bg-color: #416396;
+  --table-bg-color:#D7E1D0;
+  --information-font-color:darkgray;
+  --table-th-bg-color:#8ED7AB;
+  --warning-bg-color: #F7C3C5;
+  --border-color: #8ED7AB;
+  --background-color:#D7E1D0;
+  /*#FFFFEB*/
+  /*#E9F6A7*/
+}
+
+body {
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: var(--background-color);
+}
+
+/*header*/
+header h1 {
+  margin: 0;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: white;
+  background-color: var(--main-bg-color);
+  font-size: 30px;
+}
+
+/*nav*/
+nav {
+  background-color: var(--main-bg-color);
+}
+
+/*TODO リストのデザイン調整。*/
+
+ul.main-nav {
+  display: flex;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0px;
+  max-width: 500px;
+}
+
+ul.main-nav li {
+  width: 27%;
+}
+
+ul.main-nav li.opened {
+  border-bottom: solid 5px var(--border-color);
+}
+
+ul.main-nav a {
+  display: block;
+  margin: 2px;
+  padding: 10px;
+  background-color: var(--main-bg-color);
+  color: #f5f6f6;
+  text-align: center;
+  text-decoration: none;
+}
+
+ul.main-nav a:hover {
+  color: white;
+}
+
+article {
+  background-color: white;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th{
+  padding: 10px;
+  background-color: var(--table-th-bg-color);
+}
+
+
+td {
+  padding: 10px;
+}
+
+tr:nth-child(odd){
+  background-color: var(--table-bg-color);
+}
+
+/*article h1*/
+h1.title-article {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 20px;
+}
+
+h1.title-sidebar {
+  font-size: 20px;
+}
+
+h1.title-article-in-text{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    font-size: 30px;
+}
+
+a.annation{
+  text-decoration: none;
+  color:var(--information-font-color);
+}
+
+/*写真の列挙方法を調整。*/
+img{
+  height: 120px;
+  padding-left: 10px;
+}
+
+.picture-gallery{
+  display: flex;
+}
+.sub-information {
+  color: var(--information-font-color);
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  font-size: 15px;
+}
+
+.user-information {
+  padding-top: 5px;
+  font-size: 15px;
+}
+.information-bundle {
+  display: flex;
+}
+
+section {
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+}
+
+section h1 {
+  padding-bottom: 10px;
+}
+
+section h1.section-title-in-text{
+  font-size: 25px;
+}
+
+p{
+  line-height: 25px;
+}
+
+a.title-link {
+  color: black;
+  text-decoration: none;
+}
+
+a.title-link:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+article {
+  margin-top: 25px;
+  border-bottom: solid 5px var(--border-color);
+}
+
+article.about {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+
+.table-of-contents ul li{
+  text-decoration: none;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+footer {
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+  padding: 50px 0;
+  background-color: var(--main-bg-color);
+  color: white;
+}
+
+@media screen and (min-width: 480px) and (max-width: 840px) {
+  article.article-main {
+    width: 100%;
+  }
+  aside.sidebar-main {
+    width: 100%;
+  }
+    ul.main-nav {
+      padding-left: 0px;
+    }
+}
+
+@media screen and (min-width: 840px) {
+  main {
+    display: flex;
+  }
+  .article-bundle {
+    width: 70%;
+
+    margin-left: 2%;
+  }
+  article.article-main {
+    margin-bottom: 25px;
+    width: 100%;
+  }
+  aside.sidebar-main {
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 22%;
+  }
+  .article-information {
+    display: flex;
+  }
+    ul.main-nav {
+      padding-left: 20px;
+        }
+}

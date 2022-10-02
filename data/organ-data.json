@@ -1,0 +1,52 @@
+[
+  {
+    "id": 0,
+    "title": "池田市で採取",
+    "user_name": "shinamon-coil",
+    "identification_date": 20220419,
+    "collection_date": 20220416,
+    "update_date": null,
+    "posted_date": 20220923,
+    "organismsData": [
+      {
+        "phylum": "緑色植物門",
+        "japanese_name": "ミカヅキモ属",
+        "scientific_name": "Closterium sp.",
+        "referenceId": 0
+      }
+    ],
+    "address": "大阪府池田市",
+    "location_information": "",
+    "water_system": "",
+    "environment": "水路",
+    "environment_detail": "棚田の水路のコケ。",
+    "user_id": "1",
+    "microscope_pictures": [
+      {
+        "picture": "./data/pictures/000000000001.jpg",
+        "japanese_name": "ミカヅキモ属",
+        "scientific_name": "Closterium sp.",
+        "referenceId": 0
+      },
+      {
+        "picture": "./data/pictures/000000000002.jpg",
+        "japanese_name": "ミカヅキモ属",
+        "scientific_name": "Closterium sp.",
+        "referenceId": 0
+      }
+    ],
+    "references": [
+      {
+        "referenceId": 0,
+        "annotation": "中山 剛・山口晴代 . プランクトンハンドブック淡水編 . 文一総合出版 . 2018"
+      }
+    ],
+    "access": 0,
+    "good": 0,
+    "comments": {
+      "user_id": [],
+      "comments": []
+    },
+    "abstract": "大阪府の池田市でプランクトンを採取しました。"
+  }
+]

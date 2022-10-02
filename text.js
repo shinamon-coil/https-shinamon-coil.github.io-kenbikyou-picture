@@ -19,10 +19,26 @@ function ShowText() {
             textData: textData[0],
           },
           methods: {
-
+            getReferenceText: function (referenceId) {
+              if (referenceId != null) {
+                return "(" + referenceId + ")";
+              }
+              return null
+            },
+            getReferenceList: function (referenceId) {
+              if (referenceId != null) {
+                const referenceData = this.textData.references[referenceId];
+                if (referenceData.referenceId == referenceId) {
+                  return referenceData.referenceId + ". " + referenceData.annotation;
+                } else {
+                  console.log("error:Not match referenceId.");
+                }
+              }
+              return null;
+            }
           },
           computed: {
-          },
+          }
 
         })
       }
@@ -34,7 +50,7 @@ function PushTextData(json, textId) {
   textData.push({
     good: json[textId].good,
     id: json[textId].id,
-    organisms_data: json[textId].organisms_data,
+    organismsData: json[textId].organismsData,
     environment: json[textId].environment,
     address: json[textId].address,
     update_date: json[textId].update_date,
@@ -44,6 +60,7 @@ function PushTextData(json, textId) {
     url: "./text.html?=" + json[textId].id,
     microscope_pictures: json[textId].microscope_pictures,
     abstract: json[textId].abstract,
+    references: json[textId].references
   });
   return textData;
 }

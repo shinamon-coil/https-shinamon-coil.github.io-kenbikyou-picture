@@ -5,21 +5,22 @@
     "user_name": "shinamon-coil",
     "identification_date": 20220419,
     "collection_date": 20220416,
-    "update_date": 0,
+    "update_date": null,
     "posted_date": 20220923,
-    "organisms_data": [
+    "organismsData": [
       {
         "phylum": "緑色植物門",
         "japanese_name": "ミカヅキモ属",
-        "scientific_name": "Closterium sp."
+        "scientific_name": "Closterium sp.",
+        "referenceId": null
       },
       {
         "phylum": "緑色植物門",
         "japanese_name": "ミカヅキモ属",
-        "scientific_name": "Closterium sp."
+        "scientific_name": "Closterium sp.",
+        "referenceId": 0
       }
     ],
-    "references_id": [],
     "address": "大阪府池田市",
     "location_information": "",
     "water_system": "",
@@ -30,21 +31,20 @@
       {
         "picture": "./data/pictures/000000000001.jpg",
         "japanese_name": "ミカヅキモ属",
-        "scientific_name": "Closterium sp."
+        "scientific_name": "Closterium sp.",
+        "referenceId": null
       },
       {
         "picture": "./data/pictures/000000000002.jpg",
         "japanese_name": "ミカヅキモ属",
-        "scientific_name": "Closterium sp."
+        "scientific_name": "Closterium sp.",
+        "referenceId": 0
       }
     ],
     "references": [
       {
-        "isbn": "",
-        "start_page": "",
-        "end_page": "",
-        "book_name": "",
-        "author": ""
+        "referenceId": 0,
+        "annotation": "中山 剛・山口晴代 . プランクトンハンドブック淡水編 . 文一総合出版 . 2018:2"
       }
     ],
     "access": 0,

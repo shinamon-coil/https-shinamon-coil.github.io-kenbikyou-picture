@@ -46,11 +46,11 @@
             </section>
 
             <section>
-              <h1 class="section-title-in-text">概要</h1>
+              <h1 id="abstract" class="section-title-in-text">概要</h1>
               <p>{{textData.abstract}}</p>
             </section>
             <section>
-              <h1 class="section-title-in-text">環境</h1>
+              <h1 id="enviroment" class="section-title-in-text">環境</h1>
               <ul>
                 <li>都道府県:{{textData.address}}</li>
                 <li>環境:{{textData.environment}}</li>
@@ -59,7 +59,7 @@
               </ul>
             </section>
             <section>
-              <h1 class="section-title-in-text">採取生物リスト</h1>
+              <h1 id="organisms_list" class="section-title-in-text">採取生物リスト</h1>
               <table>
                 <tr>
                   <th>門</th>
@@ -76,7 +76,7 @@
               </table>
             </section>
             <section>
-              <h1 class="section-title-in-text">顕微鏡写真</h1>
+              <h1 id="microscope_picture" class="section-title-in-text">顕微鏡写真</h1>
               <div class="picture-gallery">
                 <div v-for="picture in textData.microscope_pictures" class="picture-and-information">
                   <img class="gallery-picture" v-bind:src="picture.picture" alt="">
@@ -86,9 +86,8 @@
                 </div>
              </div>
             </section>
-            <!--TODO 参考文献表示機能の追加。-->
             <section>
-              <h1 class="section-title-in-text">注釈</h1>
+              <h1 id="annation" class="section-title-in-text">注釈</h1>
                 <ul>
                   <li v-bind:id="reference.referenceId" v-for="reference in textData.references">
                     {{getReferenceList(reference.referenceId)}}
@@ -106,15 +105,16 @@
         </article>
       </div>
       <script src="./text.js"></script>
-      <aside class="sidebar-main"><!-- TODO 目次に移動機能を追加。-->
+      <aside class="sidebar-main">
         <article class="aside table-of-contents" >
           <section>
           <h1 class="title-article">目次</h1>
           <ul>
-            <li>概要</li>
-            <li>環境</li>
-            <li>採取生物リスト</li>
-            <li>顕微鏡写真</li>
+            <li><a class="annation" href="#abstract">概要</a></li>
+            <li><a class="annation" href="#enviroment">環境</a></li>
+            <li><a class="annation" href="#organisms_list">採取生物リスト</a></li>
+            <li><a class="annation" href="#microscope_picture">顕微鏡写真</a></li>
+            <li><a class="annation" href="#annation">注釈</a></li>
           </ul>
           </section>
         </article>

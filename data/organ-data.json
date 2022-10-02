@@ -12,12 +12,6 @@
         "phylum": "緑色植物門",
         "japanese_name": "ミカヅキモ属",
         "scientific_name": "Closterium sp.",
-        "referenceId": null
-      },
-      {
-        "phylum": "緑色植物門",
-        "japanese_name": "ミカヅキモ属",
-        "scientific_name": "Closterium sp.",
         "referenceId": 0
       }
     ],
@@ -30,12 +24,6 @@
     "microscope_pictures": [
       {
         "picture": "./data/pictures/000000000001.jpg",
-        "japanese_name": "ミカヅキモ属",
-        "scientific_name": "Closterium sp.",
-        "referenceId": null
-      },
-      {
-        "picture": "./data/pictures/000000000002.jpg",
         "japanese_name": "ミカヅキモ属",
         "scientific_name": "Closterium sp.",
         "referenceId": 0

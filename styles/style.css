@@ -114,6 +114,11 @@ h1.title-article-in-text{
     font-size: 30px;
 }
 
+a.annation{
+  text-decoration: none;
+  color:var(--information-font-color);
+}
+
 /*写真の列挙方法を調整。*/
 img{
   height: 80px;

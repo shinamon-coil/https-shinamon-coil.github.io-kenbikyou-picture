@@ -49,7 +49,7 @@ ul.main-nav {
   width: 100%;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-left: 0px;
   max-width: 500px;
 }
 
@@ -122,11 +122,8 @@ a.annation{
 
 /*写真の列挙方法を調整。*/
 img{
-  height: 80px;
+  height: 120px;
   padding-left: 10px;
-}
-img:hover{
-  height: 200px;
 }
 
 .picture-gallery{
@@ -216,6 +213,9 @@ footer {
   aside.sidebar-main {
     width: 100%;
   }
+    ul.main-nav {
+      padding-left: 0px;
+    }
 }
 
 @media screen and (min-width: 840px) {
@@ -239,4 +239,7 @@ footer {
   .article-information {
     display: flex;
   }
+    ul.main-nav {
+      padding-left: 20px;
+        }
 }

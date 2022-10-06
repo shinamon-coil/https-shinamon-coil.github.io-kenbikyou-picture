@@ -65,7 +65,13 @@
                 .attr("d", path)
                 .style("stroke", "gray")
                 .style("stroke-width", 0.25)
-                .style("fill", "blue");
+                .style("fill", "silver")
+                .on("mouseover", function () {
+                  this.style.fill = "red";
+                })
+                .on("mouseout", function () {
+                  this.style.fill = "silver";
+                });
             });
           </script>
           <!--TODO地図に登録数におおじて色を付ける。-->

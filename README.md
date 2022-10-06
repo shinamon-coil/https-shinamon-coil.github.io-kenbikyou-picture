@@ -1,2 +1,2 @@
-# https-shinamon-coil.github.io-kenbikyou-picture
+# MicroSNS
 顕微鏡写真を公開できるSNSです。（未完成）

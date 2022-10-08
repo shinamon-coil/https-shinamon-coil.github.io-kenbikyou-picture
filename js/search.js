@@ -1,4 +1,4 @@
-let searchWord = document.getElementById("search");
+/*let searchWord = document.getElementById("search");
 searchWord.addEventListener('keypress', inputChange);
 console.log(searchWord.value);
 
@@ -24,3 +24,4 @@ function isEnterKey(e) {
   }
   return false;
 }
+*/

@@ -14,7 +14,7 @@ function goToSearchPage(url) {
 }
 
 function produceUrlWithKeyWord(keyWord) {
-  let url = './search.html#q="' + keyWord + '"';
+  let url = './search.html?q="' + keyWord + '"';
   return url;
 }
 

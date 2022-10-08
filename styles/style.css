@@ -40,6 +40,13 @@ header h1 {
 /*nav*/
 nav {
   background-color: var(--main-bg-color);
+  display: flex;
+}
+
+nav input{
+  margin: 0 100px 0 auto;
+  height: 30px;
+  width: 300px;
 }
 
 /*TODO リストのデザイン調整。*/

@@ -16,6 +16,7 @@
         $("#footer").load("./templates/footer.html");
       });
     </script>
+    <script src="./js/common.js"></script>
   </head>
   <div id="head"></div>
 
@@ -32,10 +33,10 @@
       </ul>
     </nav>
     <main>
-      <div class="article-bundle">
+      <div id="app" class="article-bundle">
         <article class="article-main">
           <section>
-            <h1>結果</h1>
+            <h1>結果:{{searchKeyWord}}</h1>
           </section>
           <section>
             <div>
@@ -67,6 +68,7 @@
         </article>
       </aside>
     </main>
+    <script src="./js/search.js"></script>
     <div id="footer"></div>
   </body>
 </html>

@@ -4,8 +4,18 @@ console.log(searchWord.value);
 
 function inputChange(e) {
   if (isEnterKey(e)) {
-    console.log("search");
+    let nextUrl = produceUrlWithKeyWord(searchWord.value);
+    goToSearchPage(nextUrl);
   }
+}
+
+function goToSearchPage(url) {
+  document.location.assign(url)
+}
+
+function produceUrlWithKeyWord(keyWord) {
+  let url = './search.html?q="' + keyWord + '"';
+  return url;
 }
 
 function isEnterKey(e) {

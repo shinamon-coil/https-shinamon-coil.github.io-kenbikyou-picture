@@ -33,51 +33,77 @@
       </ul>
     </nav>
     <main>
-      <article class="about">
-        <section>
-          <h1>地域別</h1>
-          <!--TODO 地図地域選択機能追加。-->
-          <script>
-            var w = 600;
-            var h = 600;
-            var scale = 1200; //地図のスケール
+      <div class="article-bundle">
+        <article class="about">
+          <section>
+            <h1>地域別</h1>
+            <!--TODO 地図地域選択機能追加。-->
+            <script>
+              var w = 600;
+              var h = 700;
+              var scale = 1500; //地図のスケール
 
-            var projection = d3
-              .geoMercator()
-              .center([136.0, 35.6])
-              .translate([w / 2, h / 2])
-              .scale(scale);
+              var projection = d3
+                .geoMercator()
+                .center([136.0, 35.6])
+                .translate([w / 2, h / 2])
+                .scale(scale);
 
-            var path = d3.geoPath().projection(projection);
+              var path = d3.geoPath().projection(projection);
 
-            var svg = d3
-              .select("section")
-              .append("svg")
-              .attr("width", w)
-              .attr("height", h);
+              var svg = d3
+                .select("section")
+                .append("svg")
+                .attr("width", w)
+                .attr("height", h);
 
-            d3.json("./assets/japan.geo.json").then(function (json) {
-              svg
-                .selectAll("path") //都道府県の領域データをpathで描画
-                .data(json.features)
-                .enter()
-                .append("path")
-                .attr("d", path)
-                .style("stroke", "gray")
-                .style("stroke-width", 0.25)
-                .style("fill", "silver")
-                .on("mouseover", function () {
-                  this.style.fill = "red";
-                })
-                .on("mouseout", function () {
-                  this.style.fill = "silver";
-                });
-            });
-          </script>
-          <!--TODO地図に登録数におおじて色を付ける。-->
-          <!--TODO都道府県にカーソルを合わせると、登録件数、登録生物件数などの情報を表示するようにする。-->
-        </section>
-      </article>
+              d3.json("./assets/japan.geo.json").then(function (json) {
+                svg
+                  .selectAll("path") //都道府県の領域データをpathで描画
+                  .data(json.features)
+                  .enter()
+                  .append("path")
+                  .attr("d", path)
+                  .style("stroke", "gray")
+                  .style("stroke-width", 0.25)
+                  .style("fill", "silver")
+                  .on("mouseover", function () {
+                    this.style.fill = "red";
+                  })
+                  .on("mouseout", function () {
+                    this.style.fill = "silver";
+                  });
+              });
+            </script>
+            <!--TODO地図に登録数におおじて色を付ける。-->
+            <!--TODO都道府県にカーソルを合わせると、登録件数、登録生物件数などの情報を表示するようにする。-->
+          </section>
+        </article>
+      </div>
+      <aside class="sidebar-main">
+        <article class="aside">
+          <section>
+            <h1>基本データ</h1>
+            <table>
+              <tr>
+                <th>都道府県</th>
+                <th>市区町村</th>
+                <th>登録件数</th>
+              </tr>
+              <tr>
+                <td>大阪府</td>
+                <td></td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>京都府</td>
+                <td></td>
+                <td>1</td>
+              </tr>
+            </table>
+          </section>
+        </article>
+      </aside>
     </main>
     <div id="footer"></div>
   </body>

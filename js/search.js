@@ -10,7 +10,7 @@ function Show() {
       function (json) {
         const query = getQuery();
 
-        new Vue({
+        app = new Vue({
           el: "#app",
           data() {
             return { searchKeyWord: query.searchQuery }

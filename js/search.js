@@ -8,19 +8,17 @@ function Show() {
   })
     .then(
       function (json) {
-        const query = getQuery();
-
-        app = new Vue({
-          el: "#app",
+        const rootComponent = {
           data() {
-            return { searchKeyWord: query.searchQuery }
+            return { searchKeyWord: getQuery()["searchQuery"] }
           },
-          methods: {
+          methods() {
           },
-          computed: {
+          computed() {
           }
-
-        })
+        }
+        const app = Vue.createApp(rootComponent);
+        const vm = app.mount('#app');
       }
     );
 }

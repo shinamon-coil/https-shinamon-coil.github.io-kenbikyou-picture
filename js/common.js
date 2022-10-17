@@ -7,6 +7,6 @@ function getQuery() {
   }
 }
 
-function isTrueData() {
+function searchFullText(keyword) {
 
 }

@@ -1,6 +1,6 @@
 readJson();
 
-function showApp(params) {
+function showApp() {
   const rootComponent = {
     data() {
       return { searchKeyWord: getQuery()["searchQuery"] }

@@ -2,16 +2,12 @@ readJson();
 
 function showApp() {
   const rootComponent = {
-    data() {
-      return { searchKeyWord: getQuery()["searchQuery"] }
-    },
-    methods() {
-    },
-    computed() {
+    el: "#app",
+    data: {
+      searchKeyWord: getQuery()["searchQuery"]
     }
   }
-  const app = Vue.createApp(rootComponent);
-  const vm = app.mount('#app');
+  new Vue(rootComponent);
 }
 
 function readJson() {

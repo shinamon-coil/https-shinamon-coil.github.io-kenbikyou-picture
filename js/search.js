@@ -1,14 +1,4 @@
-readJson();
-
-function showApp() {
-  const rootComponent = {
-    el: "#app",
-    data: {
-      searchKeyWord: getQuery()["searchQuery"]
-    }
-  }
-  new Vue(rootComponent);
-}
+readJson()
 
 function readJson() {
   $.ajax({
@@ -17,6 +7,16 @@ function readJson() {
     dataType: 'json'
   })
     .then(
-      showApp()
+
+
+      function showApp(json) {
+        const rootComponent = {
+          el: "#app",
+          data: {
+            searchKeyWord: getQuery()["searchQuery"],
+          }
+        }
+        new Vue(rootComponent);
+      }
     );
 }

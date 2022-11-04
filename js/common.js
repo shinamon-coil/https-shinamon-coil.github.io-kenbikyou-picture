@@ -18,4 +18,5 @@ function searchFullText(keyword, json) {
       }
     }
   }
+  return json;
 }

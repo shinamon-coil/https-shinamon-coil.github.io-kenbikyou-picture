@@ -12,10 +12,8 @@ function searchFullText(keyword, json) {
   let matchArticleId = [];
 
   for (let item of json) {
-    for (let abstract of item.abstract) {
-      if (keyword in abstract) {
-        matchArticleId.push(item.id);
-      }
+    if (item.abstract.indexOf(keyword) !== -1) {
+      matchArticleId.push(item.id);
     }
   }
   return json;

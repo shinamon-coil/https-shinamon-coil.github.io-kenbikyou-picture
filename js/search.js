@@ -7,13 +7,13 @@ function readJson() {
     dataType: 'json'
   })
     .then(
-
-
       function showApp(json) {
+        searchKeyWord = getQuery()["searchQuery"]
         const rootComponent = {
           el: "#app",
           data: {
-            searchKeyWord: getQuery()["searchQuery"],
+            searchKeyWord: searchKeyWord,
+            matchArticleId: searchFullText(searchKeyWord, json)
           }
         }
         new Vue(rootComponent);

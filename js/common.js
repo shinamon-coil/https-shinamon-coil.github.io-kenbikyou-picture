@@ -9,12 +9,18 @@ function getQuery() {
 
 function searchFullText(keyword, json) {
 
-  let matchArticleId = [];
+  let matchArticle = {
+    id: [],
+    matchText: []
+  };
 
-  for (let item of json) {
-    if (item.abstract.indexOf(keyword) !== -1) {
-      matchArticleId.push(item.id);
+  for (let i = 0; i < json.length; i++) {
+    isKeywordInAbstract = (json[i].abstract.indexOf(keyword) !== -1) ? true : false;
+    isKeywordInTitle = (json[i].title.indexOf(keyword) !== -1) ? true : false;
+
+    if (isKeywordInAbstract || isKeywordInTitle) {
+      matchArticle.id.push(json[i].id);
     }
   }
-  return json;
+  return matchArticle;
 }

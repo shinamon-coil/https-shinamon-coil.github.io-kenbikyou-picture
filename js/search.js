@@ -13,7 +13,7 @@ function readJson() {
           el: "#app",
           data: {
             searchKeyWord: searchKeyWord,
-            matchArticleId: searchFullText(searchKeyWord, json)
+            matchArticle: searchFullText(searchKeyWord, json)
           }
         }
         new Vue(rootComponent);

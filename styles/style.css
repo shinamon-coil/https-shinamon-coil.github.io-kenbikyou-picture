@@ -50,7 +50,6 @@ nav input{
 }
 
 /*TODO リストのデザイン調整。*/
-
 ul.main-nav {
   display: flex;
   width: 100%;
@@ -84,6 +83,10 @@ ul.main-nav a:hover {
 
 article {
   background-color: white;
+  padding: 30px;
+  margin-top: 25px;
+  margin-left: 30px;
+  border-bottom: solid 5px var(--border-color);
 }
 
 table {
@@ -105,21 +108,22 @@ tr:nth-child(odd){
 }
 
 /*article h1*/
-h1.title-article {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-size: 20px;
+h1{
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
-
-h1.title-sidebar {
-  font-size: 20px;
+h2{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: solid 1px var(--background-color);
+  font-size: 23px;
+  font-weight: bold;
 }
-
-h1.title-article-in-text{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    font-size: 30px;
+h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 a.annation{
@@ -136,6 +140,7 @@ img{
 .picture-gallery{
   display: flex;
 }
+
 .sub-information {
   color: var(--information-font-color);
   padding-top: 5px;
@@ -152,21 +157,6 @@ img{
   display: flex;
 }
 
-section {
-  padding-top: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 20px;
-}
-
-section h1 {
-  padding-bottom: 10px;
-}
-
-section h1.section-title-in-text{
-  font-size: 25px;
-}
-
 p{
   line-height: 25px;
 }
@@ -181,10 +171,7 @@ a.title-link:hover {
   text-decoration: underline;
 }
 
-article {
-  margin-top: 25px;
-  border-bottom: solid 5px var(--border-color);
-}
+
 
 article.about {
   width: 90%;
@@ -192,9 +179,6 @@ article.about {
   margin-right: 5%;
 }
 
-h1 {
-  font-weight: bold;
-}
 
 
 .table-of-contents ul li{
@@ -231,7 +215,6 @@ footer {
   }
   .article-bundle {
     width: 70%;
-
     margin-left: 2%;
   }
   article.article-main {
@@ -241,7 +224,7 @@ footer {
   aside.sidebar-main {
     margin-left: 2%;
     margin-right: 2%;
-    width: 22%;
+    width: 300px;
   }
   .article-information {
     display: flex;

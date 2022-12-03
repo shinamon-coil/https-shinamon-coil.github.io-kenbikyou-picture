@@ -23,104 +23,30 @@
     <div id="header"></div>
     <div id="nav"></div>
     <main>
-      <div id="text"  class="article-bundle">
+      <div id="text" class="article-bundle">
+        <article id="main-article"></article>
+
         <article>
-          <section>
-          <div class="article-information">
-            <div class="basic-information">
-              <p class="user-information">{{textData.user_name}}</p>
-              <div class="information-bundle"><!--TODO 年月日の表示を 0000年00月00日　にする。-->
-                <p class="sub-information">投稿日:{{textData.posted_date}}</p>
-                <p class="sub-information">更新日:{{textData.update_date}}</p>
-              </div>
-              <h1 class="title-article-in-text">
-                <a v-bind:href="textData.url" class="title-link"
-                  >{{textData.title}}</a
-                >
-              </h1>
-              <div class="link-image"></div>
-              <div class="information-bundle">
-                <p class="sub-information">採取場所:{{textData.address}}</p>
-                <p class="sub-information">環境:{{textData.environment}}</p>
-              </div>
-            </div>
-            </section>
-
-            <section>
-              <h1 id="abstract" class="section-title-in-text">概要</h1>
-              <p>{{textData.abstract}}</p>
-            </section>
-            <section>
-              <h1 id="enviroment" class="section-title-in-text">環境</h1>
-              <ul>
-                <li>都道府県:{{textData.address}}</li>
-                <li>環境:{{textData.environment}}</li>
-                <li>詳細:{{textData.environment_detail}}</li>
-              <li><img src="" alt=""></li>
-              </ul>
-            </section>
-            <section>
-              <h1 id="organisms_list" class="section-title-in-text">採取生物リスト</h1>
-              <table>
-                <tr>
-                  <th>門</th>
-                  <th>属</th>
-                  <th>学名</th>
-                  <th>注釈</th>
-                </tr>
-                <tr v-for="organismData in textData.organismsData">
-                  <td>{{organismData.phylum}}</td>
-                  <td>{{organismData.japanese_name}}</td>
-                  <td>{{organismData.scientific_name}}</td>
-                  <td><a v-bind:href="`#${organismData.referenceId}`">{{getReferenceText(organismData.referenceId)}}</a></td>
-                </tr>
-              </table>
-            </section>
-            <section>
-              <h1 id="microscope_picture" class="section-title-in-text">顕微鏡写真</h1>
-              <div class="picture-gallery">
-                <div v-for="picture in textData.microscope_pictures" class="picture-and-information">
-                  <img class="gallery-picture" v-bind:src="picture.picture" alt="">
-                  <p>{{picture.japanese_name}}</p>
-                  <p>{{picture.scientific_name}}</p>
-                  <p><a v-bind:href="`#${picture.referenceId}`">{{getReferenceText(picture.referenceId)}}</a></p>
-                </div>
-             </div>
-            </section>
-            <section>
-              <h1 id="annation" class="section-title-in-text">注釈</h1>
-                <ul>
-                  <li v-bind:id="reference.referenceId" v-for="reference in textData.references">
-                    {{getReferenceList(reference.referenceId)}}
-                  </li>
-                </ul>
-              </table>
-            </section>
-
-        </article>
-        <article id="main-article">
-        </article>
-
-        <article><!--TODO コメント機能の実装-->
-        <section>
+          <!--TODO コメント機能の実装-->
           <h1 class="title-article-in-text">コメント</h1>
           <p>未実装</p>
-      </section>
         </article>
       </div>
       <script src="./js/text.js"></script>
       <aside class="sidebar-main">
-        <article class="aside table-of-contents" >
-          <section>
-          <h1 class="title-article">目次</h1>
+        <article class="aside table-of-contents">
+          <h1 class="title-sidebar">目次</h1>
           <ul>
             <li><a class="annation" href="#abstract">概要</a></li>
             <li><a class="annation" href="#enviroment">環境</a></li>
-            <li><a class="annation" href="#organisms_list">採取生物リスト</a></li>
-            <li><a class="annation" href="#microscope_picture">顕微鏡写真</a></li>
+            <li>
+              <a class="annation" href="#organisms_list">採取生物リスト</a>
+            </li>
+            <li>
+              <a class="annation" href="#microscope_picture">顕微鏡写真</a>
+            </li>
             <li><a class="annation" href="#annation">注釈</a></li>
           </ul>
-          </section>
         </article>
       </aside>
     </main>

@@ -32,55 +32,45 @@
     </nav>
     <main>
       <div id="app" class="article-bundle">
-        <article v-for="article in articles" class="article-main">
-          <section>
-            <div class="article-information">
-              <div class="basic-information">
-                <p class="user-information">{{article.user_name}}</p>
-                <div class="information-bundle">
-                  <p class="sub-information">投稿日:{{article.posted_date}}</p>
-                  <p class="sub-information">更新日:{{article.update_date}}</p>
-                </div>
-                <h1 class="title-article">
-                  <a v-bind:href="article.url" class="title-link"
-                    >{{article.title}}</a
-                  >
-                </h1>
-                <div class="link-image"></div>
-                <div class="information-bundle">
-                  <p class="sub-information">採取場所:{{article.address}}</p>
-                  <p class="sub-information">環境:{{article.environment}}</p>
-                </div>
+        <article v-for="article in articles">
+          <div class="article-information">
+            <div class="basic-information">
+              <p class="user-information">{{article.user_name}}</p>
+              <div class="information-bundle">
+                <p class="sub-information">投稿日:{{article.posted_date}}</p>
+                <p class="sub-information">更新日:{{article.update_date}}</p>
               </div>
-              <div class="pictures-gallery">
-                <img
-                  v-for=" picture in article.microscope_pictures"
-                  v-bind:src="picture.picture"
-                  v-bind:alt="picture.japanese_name"
-                />
+              <h1 class="title-article">
+                <a v-bind:href="article.url" class="title-link"
+                  >{{article.title}}</a
+                >
+              </h1>
+              <div class="link-image"></div>
+              <div class="information-bundle">
+                <p class="sub-information">採取場所:{{article.address}}</p>
+                <p class="sub-information">環境:{{article.environment}}</p>
               </div>
             </div>
-          </section>
+            <div class="pictures-gallery">
+              <img
+                v-for=" picture in article.microscope_pictures"
+                v-bind:src="picture.picture"
+                v-bind:alt="picture.japanese_name"
+              />
+            </div>
+          </div>
         </article>
       </div>
       <script src="./js/app.js"></script>
       <aside class="sidebar-main">
-        <article class="aside">
-          <section>
-            <h1 class="title-sidebar">ランキング</h1>
-          </section>
-          <section>
-            <h1 class="title-section">登録生物ランキング</h1>
-            <p>未実装</p>
-          </section>
-          <section>
-            <h1 class="title-section">登録地域ランキング</h1>
-            <p>未実装</p>
-          </section>
-          <section>
-            <h1 class="title-section">登録環境ランキング</h1>
-            <p>未実装</p>
-          </section>
+        <article class="aside table-of-contents">
+          <h1 class="title-sidebar">ランキング</h1>
+          <h2 class="title-section">生物</h2>
+          <p>未実装</p>
+          <h2 class="title-section">地域</h2>
+          <p>未実装</p>
+          <h2 class="title-section">環境</h2>
+          <p>未実装</p>
         </article>
       </aside>
     </main>

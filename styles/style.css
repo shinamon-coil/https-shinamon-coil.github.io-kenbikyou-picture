@@ -200,6 +200,10 @@ footer {
 @media screen and (min-width: 480px) and (max-width: 840px) {
   article.article-main {
     width: 100%;
+    margin-left: 0px;
+  }
+  article{
+    margin-left: 0px;
   }
   aside.sidebar-main {
     width: 100%;

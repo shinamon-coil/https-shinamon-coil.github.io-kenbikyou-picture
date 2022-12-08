@@ -1,4 +1,4 @@
-ShowText()
+ShowText();
 
 function ShowText() {
   $.ajax({
@@ -17,6 +17,7 @@ function ShowText() {
           el: "#text",
           data: {
             textData: textData[0],
+            article: purseMaekdown(json[textId].markdown.split("\n"), document.getElementById("main-article"))
           },
           methods: {
             getReferenceText: function (referenceId) {

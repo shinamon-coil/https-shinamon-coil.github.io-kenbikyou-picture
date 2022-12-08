@@ -78,6 +78,7 @@ function purseList(lines, line_index, main_element) {
   return index - 1;
 }
 
+//TODO HTMLインジェクション対策を行う。
 function purseURL(line) {
   return line.replace(/(http(s)?:\/([\w-]+\.)+[\w-]+(\[\w-.\?%&=]*)?)/g, '<p href="$1">link</p>');
 }

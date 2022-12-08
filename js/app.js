@@ -37,6 +37,7 @@ function ShowPage() {
     .then(
       function (json) {
         let articles_data = [];
+        //TODO 以下のjson読み込み部をcommon.jsに統合。
         for (let i = 0; (i < json.length) && (i < 5); i++) {
           articles_data.push({
             good: json[i].good,

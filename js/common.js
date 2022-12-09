@@ -71,6 +71,7 @@ function purseImage(line) {
   return html;
 }
 
+//TODO <h2>にidを設定する。
 function purseTitle(line) {
   const title = line.replace(/#/g, "").replace(/\s/g, "");
   let sharpe_counter = 0

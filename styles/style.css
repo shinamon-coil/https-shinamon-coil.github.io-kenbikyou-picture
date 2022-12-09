@@ -26,7 +26,6 @@ html {
   background-color: var(--background-color);
 }
 
-/*header*/
 header h1 {
   margin: 0;
   padding-left: 20px;
@@ -34,19 +33,24 @@ header h1 {
   padding-top: 10px;
   color: white;
   background-color: var(--main-bg-color);
-  font-size: 30px;
+  font-size: 40px;
 }
 
-/*nav*/
+/*TODO index.htmlの検索欄の位置を修正。*/
+header{
+  display: flex;
+  background-color: var(--main-bg-color);
+}
+
+header input {
+  margin: auto 30px auto auto;
+  height: 30px;
+  width: 200px;
+}
+
 nav {
   background-color: var(--main-bg-color);
   display: flex;
-}
-
-nav input{
-  margin: 0 100px 0 auto;
-  height: 30px;
-  width: 300px;
 }
 
 ul{

@@ -7,7 +7,7 @@
     "collection_date": 20220416,
     "update_date": null,
     "posted_date": 20220923,
-    "markdown": "# 大阪府で採取\n## 概要\n大阪府の棚田の水路[^1]でプランクトン採取をしました。\n## 環境\n- 水路\n- 棚田[^1]\n## 写真\n![kdafhdjas](./data/pictures/000000000001.jpg)\n![kdafhdjas](./data/pictures/000000000001.jpg)\n![kdafhdjas](./data/pictures/000000000002.jpg)\n左から順にミカズキモ、ミカズキモ、ミカズキモ\n## 参考文献\n- [^1]:中山 剛・山口晴代 . プランクトンハンドブック淡水編 . 文一総合出版 . 2018",
+    "markdown": "# 大阪府で採取\n## 概要\n大阪府の棚田の水路[^1]でプランクトン採取をしました。\n## 環境\n- 水路\n- 棚田[^2]\n## 写真\n![kdafhdjas](./data/pictures/000000000001.jpg)\n![kdafhdjas](./data/pictures/000000000001.jpg)\n![kdafhdjas](./data/pictures/000000000002.jpg)\n左から順にミカズキモ、ミカズキモ、ミカズキモ\n## 脚注\n出店\n[^1]:中山 剛・山口晴代 . プランクトンハンドブック淡水編 . 文一総合出版 . 2018\n[^2]:環境省棚田のまとめより",
     "organismsData": [
       {
         "phylum": "緑色植物門",

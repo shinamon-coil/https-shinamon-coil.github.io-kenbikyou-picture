@@ -57,9 +57,9 @@ function changeToSafeString(lines) {
 }
 
 function purseAnnotation(line) {
-  let pursed = line.replace(/\[\^(\d)\]\:/g, '<small id="anonination-$1">$1.</small>');
+  let pursed = line.replace(/\[\^(\d)\]\:/g, '<small id="anonination-$1">$1.<a href="#anonination-before-$1">^</a></small>');
   if (pursed === line) {
-    pursed = line.replace(/\[\^(\d)\]/g, '<a href="#anonination-$1"><small>($1)</small></a>');
+    pursed = line.replace(/\[\^(\d)\]/g, '<a href="#anonination-$1"><small id="anonination-before-$1">($1)</small></a>');
   }
   return pursed;
 }
@@ -71,7 +71,6 @@ function purseImage(line) {
   return html;
 }
 
-//TODO <h2>にidを設定する。
 function purseTitle(line) {
   const title = line.replace(/#/g, "").replace(/\s/g, "");
   let sharpe_counter = 0
@@ -81,6 +80,7 @@ function purseTitle(line) {
   const html = "<h" + tag + ">" + title + "</h" + tag + ">"
   return html;
 }
+
 
 function purseList(line, is_li_tag_before) {
   const content = line.replace("-", "");
@@ -94,7 +94,7 @@ function purseTable(line) {
 }
 
 //TODO リンクのパーサーを制作。
-function purseLink(line) {
+function purseURL(line) {
   return line.replace(/(http(s)?:\/([\w-]+\.)+[\w-]+(\[\w-.\?%&=]*)?)/g, '<a href="$1">link</a>');
 }
 

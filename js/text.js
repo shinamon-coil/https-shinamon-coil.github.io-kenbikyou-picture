@@ -13,11 +13,12 @@ function ShowText() {
         textData = PushTextData(json, textId);
         console.log(textData);
 
+        purseMaekdown(json[textId].markdown.split("\n"), document.getElementById("main-article"))
+
         new Vue({
           el: "#text",
           data: {
-            textData: textData[0],
-            article: purseMaekdown(json[textId].markdown.split("\n"), document.getElementById("main-article"))
+            textData: textData[0]
           },
           methods: {
             getReferenceText: function (referenceId) {

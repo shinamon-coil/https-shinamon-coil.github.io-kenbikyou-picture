@@ -27,6 +27,15 @@ function searchFullText(keyword, json) {
 //TODO 目次の項目を自動生成する関数を作成。
 
 //TODO パーサーをinnerHTMLを使用したものに変更。
+function isSafeUrlScheme(url) {
+  /*if (url.match(/^(http|https):/) === null) {
+    return false;
+  } else {
+    return true;
+  }*/
+  return false;
+}
+
 function escapeHtml(string) {
   string = string.replace(/&/g, '&amp;');
   string = string.replace(/</g, '&lt;');
@@ -36,96 +45,102 @@ function escapeHtml(string) {
   return string;
 }
 
-function checkURLScheme(url) {
-  if (url.match(/^(http|https):/) === 0) {
-    return false;
-  } else {
-    return true;
-  }
-}
-
-function getTitleTag(titleNumber) {
-  return "h" + String(titleNumber);
-}
-
-function purseTitle(lines, line_index, main_element, title_tag_number) {
-  const title = lines[line_index].replace(/#/g, "").replace(/\s/g, "");
-  let new_title = document.createElement(getTitleTag(title_tag_number));
-  new_title.innerHTML = purseAnnotation(title);
-  main_element.appendChild(new_title);
-}
-
-function getListHtml(listText) {
-  return "<li>" + listText + "</li>";
-}
-
-function purseList(lines, line_index, main_element) {
-
-  let new_ul = document.createElement("ul");
-  main_element.appendChild(new_ul);
-  for (let list_counter = 0; list_counter < lines.length; list_counter++) {
-    index = line_index + list_counter;
-    if (lines[index][0] + lines[index][1] === "- ") {
-      const list_text = lines[index].replace(/-\s/g, "");
-      new_li = document.createElement("li");
-      new_li.innerHTML = purseAnnotation(list_text);
-      console.log(list_text);
-      new_ul.appendChild(new_li);
-    } else {
-      break;
+function changeToSafeString(lines) {
+  let safe_lines = [];
+  for (let line of lines) {
+    if (isSafeUrlScheme(line)) {
+      return null;
     }
+    safe_lines.push(escapeHtml(line));
   }
-  return index - 1;
-}
-
-//TODO HTMLインジェクション対策を行う。
-function purseURL(line) {
-  return line.replace(/(http(s)?:\/([\w-]+\.)+[\w-]+(\[\w-.\?%&=]*)?)/g, '<p href="$1">link</p>');
+  return safe_lines;
 }
 
 function purseAnnotation(line) {
-  line = escapeHtml(line);
-  pursed = line.replace(/\[\^(\d)\]\:/g, '<small id="anonination-$1">$1.</small>');
+  let pursed = line.replace(/\[\^(\d)\]\:/g, '<small id="anonination-$1">$1.</small>');
   if (pursed === line) {
     pursed = line.replace(/\[\^(\d)\]/g, '<a href="#anonination-$1"><small>($1)</small></a>');
   }
   return pursed;
 }
 
-function purseImage(line, index, main_element) {
-  alt = line[index].match(/\[.*?\]/)[0].replace("[", "").replace("]", "");
-  console.log(alt);
-  path = line[index].match(/\(.*?\)/)[0].replace("(", "").replace(")", "");
-  console.log(path);
-  let new_img = document.createElement('img');
-  new_img.alt = alt;
-  new_img.src = path;
-  main_element.appendChild(new_img);
+function purseImage(line) {
+  alt = line.match(/\[.*?\]/)[0].replace("[", "").replace("]", "");
+  src = line.match(/\(.*?\)/)[0].replace("(", "").replace(")", "");
+  html = '<img src="' + src + '" alt="' + alt + '">';
+  return html;
 }
 
-function purseNormalText(lines, i, main_element) {
-  new_text = document.createElement("p");
-  new_text.innerHTML = purseAnnotation(lines[i])
-  main_element.appendChild(new_text);
+function purseTitle(line) {
+  const title = line.replace(/#/g, "").replace(/\s/g, "");
+  let sharpe_counter = 0
+  for (; line[sharpe_counter] === "#" && sharpe_counter < line.length; sharpe_counter++);
+  let tag = String(sharpe_counter);
+
+  const html = "<h" + tag + ">" + title + "</h" + tag + ">"
+  return html;
+}
+
+function purseList(line, is_li_tag_before) {
+  const content = line.replace("-", "");
+  html = "<li>" + content + "</li>";
+  return html;
+}
+
+//TODO 表のパーサーを制作。
+function purseTable(line) {
+
+}
+
+//TODO リンクのパーサーを制作。
+function purseLink(line) {
+  return line.replace(/(http(s)?:\/([\w-]+\.)+[\w-]+(\[\w-.\?%&=]*)?)/g, '<a href="$1">link</a>');
 }
 
 function purseMaekdown(markdown, main_element) {
-  let lines = markdown
-  pursedLines = [];
-  for (let i = 0; i < lines.length; i++) {
+  let pursed_lines = "";
+  const safe_lines = changeToSafeString(markdown);
 
-    if (lines[i][0] === "#") {
-      for (let j = 0; j < lines[i].length; j++) {
-        if (lines[i][j] === '#' && lines[i][j + 1] === " ") {
-          purseTitle(lines, i, main_element, j + 1);
+  if (safe_lines === null) {
+    console.log("include unsafe url!");
+    return false;
+  }
+
+  let is_li_tag_berfore = false;
+
+  for (let line of safe_lines) {
+    line = purseAnnotation(line);
+    line = purseURL(line);
+
+    if (is_li_tag_berfore && line[0] !== "-") {
+      pursed_lines += "</ul>"
+      is_li_tag_berfore = false;
+    }
+
+    switch (line[0]) {
+      case "!":
+        pursed_lines += purseImage(line);
+        break;
+      case "-":
+        console.log("121");
+        console.log(is_li_tag_berfore);
+        if (!is_li_tag_berfore) {
+          pursed_lines += "<ul>"
         }
-      }
-    } else if (lines[i][0] + lines[i][1] === "- ") {
-      i = purseList(lines, i, main_element)
-    } else if (lines[i][0] === "!") {
-      purseImage(lines, i, main_element);
-    } else {
-      purseNormalText(lines, i, main_element);
+        pursed_lines += purseList(line);
+        is_li_tag_berfore = true;
+        break;
+      case "|":
+        pursed_lines += purseTable(line);
+        break;
+      case "#":
+        pursed_lines += purseTitle(line);
+        break;
+      default:
+        pursed_lines += ("<p>" + line + "</p>");
+        break;
     }
   }
+  console.log(pursed_lines);
+  main_element.innerHTML = pursed_lines;
 }

@@ -48,9 +48,6 @@ nav input{
   height: 30px;
   width: 300px;
 }
-.garary{
-  display: flex;
-}
 
 ul{
   list-style-type:disc;
@@ -140,10 +137,13 @@ a.annation{
 
 /*TODO aタグのクリック後のデザインを変更。*/
 
-/*TODO写真の列挙方法を調整。*/
 img{
   height: 120px;
-  padding-left: 10px;
+  margin-right: 20px;
+}
+
+.garary {
+  display: flex;
 }
 
 .picture-gallery{

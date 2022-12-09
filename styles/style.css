@@ -52,7 +52,11 @@ nav input{
   display: flex;
 }
 
-/*TODO リストのデザイン調整。*/
+ul{
+  list-style-type:disc;
+  margin-left: 30px;
+}
+
 ul.main-nav {
   display: flex;
   width: 100%;

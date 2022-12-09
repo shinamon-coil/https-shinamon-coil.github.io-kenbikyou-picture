@@ -138,7 +138,9 @@ a.annation{
   color:var(--information-font-color);
 }
 
-/*写真の列挙方法を調整。*/
+/*TODO aタグのクリック後のデザインを変更。*/
+
+/*TODO写真の列挙方法を調整。*/
 img{
   height: 120px;
   padding-left: 10px;

@@ -67,7 +67,7 @@ function purseAnnotation(line) {
 function purseImage(line) {
   alt = line.match(/\[.*?\]/)[0].replace("[", "").replace("]", "");
   src = line.match(/\(.*?\)/)[0].replace("(", "").replace(")", "");
-  html = '<img src="' + src + '" alt="' + alt + '">';
+  html = '<div><img src="' + src + '" alt="' + alt + '">' + '<p>' + alt + '</p></div>';
   return html;
 }
 
@@ -108,6 +108,8 @@ function purseMaekdown(markdown, main_element) {
   }
 
   let is_li_tag_berfore = false;
+  let is_img_tag_berfore = false;
+
 
   for (let line of safe_lines) {
     line = purseAnnotation(line);
@@ -117,14 +119,20 @@ function purseMaekdown(markdown, main_element) {
       pursed_lines += "</ul>"
       is_li_tag_berfore = false;
     }
+    if (is_img_tag_berfore && line[0] !== "!") {
+      pursed_lines += "</div>"
+      is_img_tag_berfore = false;
+    }
 
     switch (line[0]) {
       case "!":
+        if (!is_img_tag_berfore) {
+          pursed_lines += '<div class="garary">';
+        }
         pursed_lines += purseImage(line);
+        is_img_tag_berfore = true;
         break;
       case "-":
-        console.log("121");
-        console.log(is_li_tag_berfore);
         if (!is_li_tag_berfore) {
           pursed_lines += "<ul>"
         }

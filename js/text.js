@@ -18,7 +18,8 @@ function ShowText() {
         new Vue({
           el: "#text",
           data: {
-            textData: textData[0]
+            textData: textData[0],
+            sub_titles: getSubTitles(json[textId].markdown.split("\n"))
           },
           methods: {
             getReferenceText: function (referenceId) {

@@ -25,6 +25,15 @@ function searchFullText(keyword, json) {
 }
 
 //TODO 目次の項目を自動生成する関数を作成。
+function getSubTitles(markdown) {
+  let sub_titles = []
+  for (line of markdown) {
+    if (line.slice(0, 2) === "##") {
+      sub_titles.push(line.slice(3));
+    }
+  }
+  return sub_titles;
+}
 
 //TODO パーサーをinnerHTMLを使用したものに変更。
 function isSafeUrlScheme(url) {
@@ -77,7 +86,8 @@ function purseTitle(line) {
   for (; line[sharpe_counter] === "#" && sharpe_counter < line.length; sharpe_counter++);
   let tag = String(sharpe_counter);
 
-  const html = "<h" + tag + ">" + title + "</h" + tag + ">"
+  const html = "<h" + tag + ' id="' + title + '"' + ">" + title + "</h" + tag + ">"
+  console.log(html);
   return html;
 }
 

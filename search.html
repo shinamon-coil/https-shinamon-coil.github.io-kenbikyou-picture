@@ -34,19 +34,24 @@
     </nav>
     <main>
       <div id="app" class="article-bundle">
-        <article class="article-main">
+        <div class="page-title">結果:{{searchKeyWord}}</div>
+        <div class="article-main">
           <!--TODO 検索列挙機能を追加。--->
-          <section>
-            <h1>結果:{{searchKeyWord}}</h1>
-          </section>
-          <section>
-            <div>
-              <p>記事ID:{{matchArticle.id}}</p>
-              <p>タイトル:</p>
-              <p>一致箇所: ”{{matchArticle.matchText}}”</p>
+          <article v-for="id in matchArticle.id">
+            <p class="user-information">{{json[id].user_name}}</p>
+            <div class="information-bundle">
+              <p class="sub-information">投稿日：{{json[id].posted_date}}</p>
+              <p class="sub-information">更新日：{{json[id].update_date}}</p>
             </div>
-          </section>
-        </article>
+            <p></p>
+            <h1>
+              <a class="title-article" v-bind:href="'./text.html?='+json[id].id"
+                >{{json[id].title}}</a
+              >
+            </h1>
+            <p>{{json[id].abstract}}</p>
+          </article>
+        </div>
       </div>
       <aside class="sidebar-main">
         <article class="aside">

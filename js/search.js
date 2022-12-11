@@ -12,6 +12,7 @@ function readJson() {
         const rootComponent = {
           el: "#app",
           data: {
+            json: json,
             searchKeyWord: searchKeyWord,
             matchArticle: searchFullText(searchKeyWord, json)
           }

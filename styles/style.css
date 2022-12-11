@@ -170,6 +170,14 @@ img{
   display: flex;
 }
 
+.page-title {
+  font-size: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  scroll-margin-right: 20px;
+  font-weight: 400;
+}
+
 p{
   line-height: 25px;
 }

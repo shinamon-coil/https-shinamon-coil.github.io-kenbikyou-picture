@@ -24,7 +24,6 @@ function searchFullText(keyword, json) {
   return matchArticle;
 }
 
-//TODO 目次の項目を自動生成する関数を作成。
 function getSubTitles(markdown) {
   let sub_titles = []
   for (line of markdown) {

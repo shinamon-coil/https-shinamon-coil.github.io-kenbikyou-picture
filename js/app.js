@@ -50,6 +50,7 @@ function ShowPage() {
             title: json[i].title,
             microscope_pictures: json[i].microscope_pictures,
             url: "./text.html?=" + json[i].id,
+            picture_data: getPicturePathFromMarkdown(json[i].markdown.split("\n"))
           });
 
         }
@@ -65,7 +66,7 @@ function ShowPage() {
         new Vue({/*TODO 警告の原因を突き止める。 */
           el: "#app",
           data: {
-            articles: articles_data,
+            articles: articles_data
           },
           methods: {
           },

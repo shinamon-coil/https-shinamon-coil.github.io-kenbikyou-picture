@@ -7,6 +7,21 @@ function getQuery() {
   }
 }
 
+function getPicturePathFromMarkdown(markdown) {
+  let pictures_data = []
+  let picture_path = null;
+  for (line of markdown) {
+    if (line[0] == "!") {
+      picture_path = String(line.match(/\(.*?\)/)).replace(/\(/g, '').replace(/\)/g, '');
+
+      const picture_data = { "picture_path": picture_path }
+      pictures_data.push(picture_data)
+    }
+  }
+  console.log(pictures_data);
+  return pictures_data
+}
+
 function searchFullText(keyword, json) {
   let matchArticle = {
     id: [],

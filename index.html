@@ -14,6 +14,7 @@
         $("#footer").load("./templates/footer.html");
       });
     </script>
+    <script src="./js/common.js"></script>
   </head>
   <div id="head"></div>
   <header>
@@ -48,17 +49,11 @@
                   >{{article.title}}</a
                 >
               </h1>
-              <div class="link-image"></div>
-              <div class="information-bundle">
-                <p class="sub-information">採取場所:{{article.address}}</p>
-                <p class="sub-information">環境:{{article.environment}}</p>
-              </div>
             </div>
             <div class="pictures-gallery">
               <img
-                v-for=" picture in article.microscope_pictures"
-                v-bind:src="picture.picture"
-                v-bind:alt="picture.japanese_name"
+                v-for=" picture in article.picture_data"
+                v-bind:src="picture.picture_path"
               />
             </div>
           </div>

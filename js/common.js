@@ -48,7 +48,6 @@ function getSubTitles(markdown) {
   return sub_titles;
 }
 
-//TODO パーサーをinnerHTMLを使用したものに変更。
 function isSafeUrlScheme(url) {
   /*if (url.match(/^(http|https):/) === null) {
     return false;

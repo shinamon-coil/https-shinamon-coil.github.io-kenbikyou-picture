@@ -29,10 +29,9 @@ function searchFullText(keyword, json) {
   };
 
   for (let i = 0; i < json.length; i++) {
-    isKeywordInAbstract = (json[i].abstract.indexOf(keyword) !== -1) ? true : false;
-    isKeywordInTitle = (json[i].title.indexOf(keyword) !== -1) ? true : false;
+    isKeywordInAbstract = (json[i].markdown.indexOf(keyword) !== -1) ? true : false;
 
-    if (isKeywordInAbstract || isKeywordInTitle) {
+    if (isKeywordInAbstract) {
       matchArticle.id.push(json[i].id);
     }
   }

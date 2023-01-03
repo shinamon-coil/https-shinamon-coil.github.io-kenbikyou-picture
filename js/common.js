@@ -59,6 +59,15 @@ function searchFullText(keyword, json) {
   return matchArticle;
 }
 
+function getTitle(markdown) {
+  for (line of markdown) {
+    if (line.slice(0, 2) === "# ") {
+      const title = line.slice(2)
+      return title
+    }
+  }
+}
+
 function getSubTitles(markdown) {
   let sub_titles = []
   for (line of markdown) {

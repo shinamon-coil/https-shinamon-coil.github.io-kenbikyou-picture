@@ -1,7 +1,6 @@
 [
   {
     "id": 0,
-    "title": "大阪府で採取",
     "user_name": "shinamon-coil",
     "identification_date": 20220419,
     "collection_date": 20220416,
@@ -18,7 +17,6 @@
   },
   {
     "id": 1,
-    "title": "顕微鏡カメラを自作した話",
     "user_name": "shinamon-coil",
     "identification_date": 20220419,
     "collection_date": 20220416,
@@ -34,7 +32,6 @@
   },
   {
     "id": 2,
-    "title": "分布図作り",
     "user_name": "shinamon-coil",
     "identification_date": 20220419,
     "collection_date": 20220416,

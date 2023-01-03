@@ -19,7 +19,7 @@ function ShowPage() {
             update_date: json[i].update_date,
             posted_date: json[i].posted_date,
             user_name: json[i].user_name,
-            title: json[i].title,
+            title: getTitle(json[i].markdown.split("\n")),
             microscope_pictures: json[i].microscope_pictures,
             url: "./text.html?=" + json[i].id,
             picture_data: getPicturePathFromMarkdown(json[i].markdown.split("\n"))

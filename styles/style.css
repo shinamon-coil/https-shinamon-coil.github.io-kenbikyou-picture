@@ -36,6 +36,22 @@ header h1 {
   font-size: 40px;
 }
 
+.wall-paper{
+  display: flex;
+
+}
+
+header h2{
+  margin: 0;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: white;
+  background-color: var(--main-bg-color);
+  font-size: 15px;
+  border: 0;
+}
+
 /*TODO index.htmlの検索欄の位置を修正。*/
 header{
   display: flex;
@@ -85,16 +101,45 @@ ul.main-nav a {
   text-decoration: none;
 }
 
+header a{
+  text-decoration: none;
+  color: white;
+}
+
 ul.main-nav a:hover {
   color: white;
 }
 
-article {
+.link_top {
+padding: 5px;
+margin-bottom: 10px;
+}
+.link_top a{
+  color:black;
+    text-decoration: none;
+}
+
+.link_top:hover h1{
+  color: var(--main-bg-color);
+  transition:  0.3s;
+}
+
+main {
   background-color: white;
   padding: 30px;
   margin-top: 25px;
-  margin-left: 30px;
   border-bottom: solid 5px var(--border-color);
+}
+
+.side-bar {
+  background-color: white;
+  border-bottom: solid 5px var(--border-color);
+  margin-top: 25px;
+}
+
+.side-bar-h1{
+  padding-top: 20px;
+  padding-left: 25px;
 }
 
 table {
@@ -193,12 +238,11 @@ a.title-link:hover {
 
 
 
-article.about {
+main.about {
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
 }
-
 
 
 .table-of-contents ul li{
@@ -218,42 +262,36 @@ footer {
 }
 
 @media screen and (min-width: 480px) and (max-width: 840px) {
-  article.article-main {
+
+  .wall-paper{
+    display:block;
+  }
+  main{
     width: 100%;
     margin-left: 0px;
   }
-  article{
+  .side-bar{
+    width: 100%;
     margin-left: 0px;
   }
-  aside.sidebar-main {
-    width: 100%;
+  ul.main-nav {
+    padding-left: 0px;
   }
-    ul.main-nav {
-      padding-left: 0px;
-    }
 }
 
 @media screen and (min-width: 840px) {
-  main {
-    display: flex;
+  .wall-paper {
+      display: flex;
+    }
+  main{
+    width: 60%;
+    margin-left: 2.5%;
   }
-  .article-bundle {
-    width: 70%;
-    margin-left: 2%;
-  }
-  article.article-main {
-    margin-bottom: 25px;
-    width: 100%;
-  }
-  aside.sidebar-main {
-    margin-left: 2%;
-    margin-right: 2%;
-    width: 300px;
+  .side-bar{
+    width: 27.5%;
+    margin-left: 2.5%;
   }
   .article-information {
     display: flex;
   }
-    ul.main-nav {
-      padding-left: 20px;
-        }
 }

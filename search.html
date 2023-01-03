@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <title>BioTechSNS</title>
+    <title>BioTech</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.6.1.js"
@@ -33,43 +33,21 @@
       </ul>
     </nav>
     <main>
-      <div id="app" class="article-bundle">
+      <div id="app">
         <div class="page-title">結果:{{searchKeyWord}}</div>
-        <div class="article-main">
-          <article v-for="id in matchArticle.id">
+        <div v-for="id in matchArticle.id" class="link-top">
+          <a v-bind:href="'./text.html?='+json[id].id">
             <p class="user-information">{{json[id].user_name}}</p>
             <div class="information-bundle">
               <p class="sub-information">投稿日：{{json[id].posted_date}}</p>
               <p class="sub-information">更新日：{{json[id].update_date}}</p>
             </div>
             <p></p>
-            <h1>
-              <a class="title-article" v-bind:href="'./text.html?='+json[id].id"
-                >{{json[id].title}}</a
-              >
-            </h1>
+            <h1 class="title-article" class="title-link">{{json[id].title}}</h1>
             <p>{{json[id].abstract}}</p>
-          </article>
+          </a>
         </div>
       </div>
-      <aside class="sidebar-main">
-        <article class="aside">
-          <section>
-            <h1>絞り込み</h1>
-            <p>環境</p>
-            <input type="text" name="" id="" />
-            <p>地域</p>
-            <input type="text" name="" id="" />
-            <p>学名</p>
-            <input type="text" name="" id="" />
-            <p>和名</p>
-            <input type="text" name="" id="" />
-            <p>分類</p>
-            <input type="text" value="" id="" />
-            <input type="submit" value="検索" />
-          </section>
-        </article>
-      </aside>
     </main>
     <script src="./js/search.js"></script>
     <div id="footer"></div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <title>BioTechSNS</title>
+    <title>BioTech</title>
     <script
       src="https://code.jquery.com/jquery-3.6.1.js"
       integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
@@ -22,30 +22,12 @@
   <body>
     <div id="header"></div>
     <div id="nav"></div>
-    <main>
-      <div id="text" class="article-bundle">
-        <article id="main-article"></article>
+    <div>
+      <aside class="sidebar-main"></aside>
+    </div>
 
-        <article>
-          <!--TODO コメント機能の実装-->
-          <h1 class="title-article-in-text">コメント</h1>
-          <p>未実装</p>
-        </article>
-        <aside class="sidebar-main">
-          <article class="aside table-of-contents">
-            <!--TODO スマートフォン版の際に目次を上部に表示-->
-            <!--TODO 目次の自動生成機能を作成-->
-            <div class="title-sidebar">目次</div>
-            <div v-for="sub_title in sub_titles">
-              <p>
-                <a class="annation" v-bind:href="'#'+sub_title"
-                  >{{sub_title}}</a
-                >
-              </p>
-            </div>
-          </article>
-        </aside>
-      </div>
+    <main id="text">
+      <article id="main-article"></article>
       <script src="./js/text.js"></script>
     </main>
     <div id="footer"></div>

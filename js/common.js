@@ -7,6 +7,27 @@ function getQuery() {
   }
 }
 
+function isEnterKey(e) {
+  if (e.keyCode === 13) {
+    return true;
+  }
+  return false;
+}
+function inputChange(e) {
+  if (isEnterKey(e)) {
+    let nextUrl = produceUrlWithKeyWord(searchWord.value);
+    goToSearchPage(nextUrl);
+  }
+}
+function goToSearchPage(url) {
+  document.location.assign(url)
+}
+
+function produceUrlWithKeyWord(keyWord) {
+  let url = './search.html?q="' + keyWord + '"';
+  return url;
+}
+
 function getPicturePathFromMarkdown(markdown) {
   let pictures_data = []
   let picture_path = null;

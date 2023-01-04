@@ -17,25 +17,19 @@
     <script src="./js/common.js"></script>
   </head>
   <div id="head"></div>
-  <header>
-    <div>
-      <h1><a href="./index.html">BioTech</a></h1>
-      <h2>生物好きによる日々の小話集</h2>
-    </div>
-    <input type="text" placeholder="検索" name="search" id="search" />
-    <script src="./js/search_header.js"></script>
-  </header>
   <body>
-    <div id="header"></div>
-    <nav>
-      <ul class="main-nav">
-        <li class="opened"><a href="index.html">Recent</a></li>
-        <li><a href="./area.html">Made</a></li>
-        <!--<li><a href="./organism.html">生物</a></li>-->
-        <!--<li><a href="./enviroment.html">環境</a></li>-->
-        <!--<li><a href="./question.html">質問</a></li>-->
-      </ul>
-    </nav>
+    <header>
+        <a href="./index.html">
+          <h1>BioTech</h1>
+          <h2>生物好きによる日々の小話集</h2>
+        </a>
+      <nav>
+        <ul class="main-nav">
+          <li class="opened"><a href="index.html">Recent</a></li>
+      </nav>
+      <input type="text" placeholder="検索" name="search" id="search"  name="search" class="search-form "/>
+      <script src="./js/search_header.js"></script>
+    </header>
     <div class="wall-paper">
       <main id="app">
         <div v-for="article in articles" class="link_top">
@@ -57,7 +51,8 @@
       </main>
       <div class="side-bar">
         <aside>
-          <h1 class="side-bar-h1">プロフィール</h1>
+          <h1 class="side-bar-h1">サイト紹介</h1>
+          <p>日々行っている工作や簡易実験などを公開しています。良ければ参考にしてください。生物好きなので生物関連の記事が多いです。</p>
         </aside>
       </div>
     </div>

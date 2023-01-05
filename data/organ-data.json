@@ -1,48 +1,15 @@
 [
   {
     "id": 0,
-    "user_name": "shinamon-coil",
-    "identification_date": 20220419,
-    "collection_date": 20220416,
     "update_date": null,
-    "posted_date": 20220923,
-    "markdown": "# 大阪府で採取\n## 概要\n大阪府の棚田の水路でプランクトン採取をしました。\n## 写真\n![ミカズキモ属](./data/pictures/000000000001.jpg)\n![ミカズキモ属](./data/pictures/000000000001.jpg)\n![ミカズキモ属](./data/pictures/000000000002.jpg)\n## 脚注\n出典\n中山 剛・山口晴代 . プランクトンハンドブック淡水編 . 文一総合出版 . 2018",
+    "posted_date": null,
+    "markdown": "",
     "access": 0,
     "good": 0,
     "comments": {
       "user_id": [],
       "comments": []
     },
-    "abstract": "大阪府の池田市でプランクトンを採取しました。"
-  },
-  {
-    "id": 1,
-    "user_name": "shinamon-coil",
-    "identification_date": 20220419,
-    "collection_date": 20220416,
-    "update_date": null,
-    "posted_date": 20220923,
-    "markdown": "# 顕微鏡を自作した話\n\n## なぜ作ろうと思ったか\n地衣類をタイムラプス観察しようと思いましたが、三眼顕微鏡、顕微鏡用のカメラがなく、これは作るしかないと思ったから。\n## 苦労",
-    "access": 0,
-    "good": 0,
-    "comments": {
-      "user_id": [],
-      "comments": []
-    }
-  },
-  {
-    "id": 2,
-    "user_name": "shinamon-coil",
-    "identification_date": 20220419,
-    "collection_date": 20220416,
-    "update_date": null,
-    "posted_date": 20220923,
-    "markdown": "# 分布図作り\n",
-    "access": 0,
-    "good": 0,
-    "comments": {
-      "user_id": [],
-      "comments": []
-    }
+    "abstract": ""
   }
 ]

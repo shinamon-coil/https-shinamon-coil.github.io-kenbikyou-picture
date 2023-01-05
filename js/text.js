@@ -1,4 +1,4 @@
-ShowText()
+ShowText();
 
 function ShowText() {
   $.ajax({
@@ -13,10 +13,13 @@ function ShowText() {
         textData = PushTextData(json, textId);
         console.log(textData);
 
+        purseMaekdown(json[textId].markdown.split("\n"), document.getElementById("main-article"))
+
         new Vue({
           el: "#text",
           data: {
             textData: textData[0],
+            sub_titles: getSubTitles(json[textId].markdown.split("\n"))
           },
           methods: {
             getReferenceText: function (referenceId) {

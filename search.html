@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>BioTech</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("./templates/header.html");
+        $("#nav").load("./templates/nav.html");
+        $("#head").load("./templates/head.html");
+        $("#footer").load("./templates/footer.html");
+      });
+    </script>
+    <script src="./js/common.js"></script>
+  </head>
+  <div id="head"></div>
+
+  <body>
+    <div id="header"></div>
+    <main>
+      <div id="app">
+        <div class="page-title">結果:{{searchKeyWord}}</div>
+        <div v-for="id in matchArticle.id" class="link-top">
+          <a v-bind:href="'./text.html?='+json[id].id">
+            <p class="user-information">{{json[id].user_name}}</p>
+            <div class="information-bundle">
+              <p class="sub-information">投稿日：{{json[id].posted_date}}</p>
+              <p class="sub-information">更新日：{{json[id].update_date}}</p>
+            </div>
+            <p></p>
+            <h1 class="title-article" class="title-link">
+              {{json[id].markdown}}
+            </h1>
+            <p>{{json[id].abstract}}</p>
+          </a>
+        </div>
+      </div>
+    </main>
+    <script src="./js/search.js"></script>
+    <div id="footer"></div>
+  </body>
+</html>

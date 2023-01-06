@@ -136,7 +136,7 @@ function purseTitle(line) {
 
 function purseList(line, is_li_tag_before) {
   const content = line.replace("-", "");
-  html = "<li>" + content + "</li>";
+  html = '<li class="article-list">' + content + "</li>";
   return html;
 }
 

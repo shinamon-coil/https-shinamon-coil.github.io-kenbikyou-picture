@@ -200,6 +200,11 @@ h3 {
   font-size: 20px;
 }
 
+.article-list{
+  margin-left: 30px;
+  padding: 2px 0px 0px 2px;
+}
+
 a.annation{
   text-decoration: none;
   color:var(--information-font-color);

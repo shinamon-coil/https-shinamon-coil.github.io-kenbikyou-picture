@@ -60,7 +60,7 @@ header{
 }
 
 header input {
-  margin: auto 30px auto auto;
+  margin: auto 30px auto 0px;
   height: 30px;
   width: 200px;
 }
@@ -68,8 +68,7 @@ header input {
 nav {
   background-color: var(--backgroud-nav-color);
   display: flex;
-  margin-right: auto;
-  margin-left: 100px;
+  margin: auto auto 0px 40px;
 }
 
 ul{
@@ -123,6 +122,20 @@ margin-bottom: 10px;
 .link_top:hover h1{
   color: var(--main-bg-color);
   transition:  0.3s;
+}
+
+.navigation-wrap{
+  display: flex;
+  width: 100%;
+}
+
+.language-selector-wrap{
+    margin: auto 30px 35px auto;
+}
+
+.language-selector{
+  margin-top: auto;
+  margin-bottom: 0px;
 }
 
 main {

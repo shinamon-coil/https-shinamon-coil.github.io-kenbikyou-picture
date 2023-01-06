@@ -19,15 +19,36 @@
   <div id="head"></div>
   <body>
     <header>
-        <a href="./index.html">
+      <a href="./index.html">
+        <div>
           <h1>BioTech</h1>
           <h2>生物好きによる日々の小話集</h2>
-        </a>
-      <nav>
-        <ul class="main-nav">
-          <li class="opened"><a href="index.html">Home</a></li>
-      </nav>
-      <input type="text" placeholder="検索" name="search" id="search"  name="search" class="search-form "/>
+        </div>
+      </a>
+
+      <div class="navigation-wrap">
+        <nav>
+          <ul class="main-nav">
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </nav>
+
+        <div class="language-selector-wrap">
+          <select name="" id="">
+            <option>日本語</option>
+            <option>English</option>
+          </select>
+        </div>
+
+        <input
+          type="text"
+          placeholder="検索"
+          name="search"
+          id="search"
+          class="search-form"
+        />
+      </div>
+
       <script src="./js/search_header.js"></script>
     </header>
     <div class="wall-paper">
@@ -52,7 +73,9 @@
       <div class="side-bar">
         <aside>
           <h1 class="side-bar-h1">サイト紹介</h1>
-          <p>日々行っている工作や簡易実験などを公開しています。良ければ参考にしてください。生物好きなので生物関連の記事が多いです。</p>
+          <p>
+            日々行っている工作や簡易実験などを公開しています。良ければ参考にしてください。生物好きなので生物関連の記事が多いです。
+          </p>
         </aside>
       </div>
     </div>

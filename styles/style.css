@@ -65,6 +65,10 @@ header input {
   width: 200px;
 }
 
+.logo-wrap{
+  width: 260px;
+}
+
 nav {
   background-color: var(--backgroud-nav-color);
   display: flex;
@@ -130,7 +134,7 @@ margin-bottom: 10px;
 }
 
 .language-selector-wrap{
-    margin: auto 30px 35px auto;
+    margin: auto 30px auto auto;
 }
 
 .language-selector{

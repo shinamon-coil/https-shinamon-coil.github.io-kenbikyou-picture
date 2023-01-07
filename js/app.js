@@ -42,10 +42,13 @@ function ShowPage() {
             selected: "",
             language: "English",
             about_site: { "日本語": "日々行っている生物関連の個人開発、簡易実験などを公開しています。良ければ参考にしてください。もちろん生物以外の記事もあります。", "English": "Welcome to my personal web site! I talk about personal developments,simple experiments about organisms,organisms photos,and so on." },
-            logo: { "日本語": "生物好きによる日々の小話集", "English": "" },
-            uptodate: {
-              "日本語": "最新", "English": "Up To Date"
-            }
+            logo: { "日本語": "生物好きによる日々の小話集", "English": "biology lover life" },
+            blog: {
+              "日本語": "作ってみた", "English": "Try to"
+            },
+            posted_date: { "日本語": "投稿日", "English": "Posted Date" },
+            updated_date: { "日本語": "更新日", "English": "Updated Date" },
+            search: { "日本語": "検索", "English": "Search" }
           },
           methods: {
           },

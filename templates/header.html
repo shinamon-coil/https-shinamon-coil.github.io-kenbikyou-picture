@@ -1,15 +1,15 @@
 <header>
-  <a href="./index.html">
-    <div>
+  <div class="logo-wrap">
+    <a href="./index.html">
       <h1>BioTech</h1>
       <h2>{{logo[language]}}</h2>
-    </div>
-  </a>
+    </a>
+  </div>
 
   <div class="navigation-wrap">
     <nav>
       <ul class="main-nav">
-        <li><a href="index.html">Home</a></li>
+        <li class="opened"><a href="index.html">Home</a></li>
       </ul>
     </nav>
 
@@ -22,12 +22,11 @@
 
     <input
       type="text"
-      placeholder="検索"
+      v-bind="{placeholder:search[language]}"
       name="search"
       id="search"
       class="search-form"
     />
   </div>
-
   <script src="./js/search_header.js"></script>
 </header>

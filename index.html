@@ -21,17 +21,17 @@
   <body>
     <div id="app">
       <header>
-        <a href="./index.html">
-          <div>
+        <div class="logo-wrap">
+          <a href="./index.html">
             <h1>BioTech</h1>
             <h2>{{logo[language]}}</h2>
-          </div>
-        </a>
+          </a>
+        </div>
 
         <div class="navigation-wrap">
           <nav>
             <ul class="main-nav">
-              <li><a href="index.html">Home</a></li>
+              <li class="opened"><a href="index.html">Home</a></li>
             </ul>
           </nav>
 
@@ -44,31 +44,31 @@
 
           <input
             type="text"
-            placeholder="検索"
+            v-bind="{placeholder:search[language]}"
             name="search"
             id="search"
             class="search-form"
           />
         </div>
-
         <script src="./js/search_header.js"></script>
       </header>
+
       <div class="wall-paper">
         <main>
           <h1>BioTech</h1>
           <p>{{about_site[language]}}</p>
 
-          <h2>{{uptodate[language]}}</h2>
+          <h2>{{blog[language]}}</h2>
           <div v-for="article in articles" class="link_top">
             <a v-bind:href="article.url">
               <div class="article-information">
                 <div class="basic-information">
                   <div class="information-bundle">
                     <p class="sub-information">
-                      投稿日:{{article.posted_date}}
+                      {{updated_date[language]}}:{{article.posted_date}}
                     </p>
                     <p class="sub-information">
-                      更新日:{{article.update_date}}
+                      {{updated_date[language]}}:{{article.update_date}}
                     </p>
                   </div>
                   <h1 class="title-article" class="title-link">
@@ -81,7 +81,7 @@
         </main>
       </div>
       <div id="footer"></div>
-      <script src="./js/app.js"></script>
     </div>
+    <script src="./js/app.js"></script>
   </body>
 </html>

@@ -19,17 +19,54 @@
     <script src="./js/common.js"></script>
   </head>
   <div id="head"></div>
-  <body>
-    <div id="header"></div>
-    <div id="nav"></div>
-    <div>
-      <aside class="sidebar-main"></aside>
-    </div>
 
-    <main id="text">
-      <article id="main-article"></article>
+  <body>
+    <div id="text">
+      <header>
+        <a href="./index.html">
+          <div>
+            <h1>BioTech</h1>
+            <h2>{{logo[language]}}</h2>
+          </div>
+        </a>
+
+        <div class="navigation-wrap">
+          <nav>
+            <ul class="main-nav">
+              <li><a href="index.html">Home</a></li>
+            </ul>
+          </nav>
+
+          <div class="language-selector-wrap">
+            <select name="" v-model="language">
+              <option>English</option>
+              <option>日本語</option>
+            </select>
+          </div>
+
+          <input
+            type="text"
+            placeholder="検索"
+            name="search"
+            id="search"
+            class="search-form"
+          />
+        </div>
+
+        <script src="./js/search_header.js"></script>
+      </header>
+
+      <div id="nav"></div>
+      <div>
+        <aside class="sidebar-main"></aside>
+      </div>
+
+      <main>
+        <article id="main-article"></article>
+        <script src="./js/text.js"></script>
+      </main>
+      <div id="footer"></div>
       <script src="./js/text.js"></script>
-    </main>
-    <div id="footer"></div>
+    </div>
   </body>
 </html>

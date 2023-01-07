@@ -19,7 +19,14 @@ function ShowText() {
           el: "#text",
           data: {
             textData: textData[0],
-            sub_titles: getSubTitles(json[textId].markdown.split("\n"))
+            sub_titles: getSubTitles(json[textId].markdown.split("\n")),
+            selected: "",
+            language: "English",
+            about_site: { "日本語": "日々行っている生物関連の個人開発、簡易実験などを公開しています。良ければ参考にしてください。もちろん生物以外の記事もあります。", "English": "Welcome to my personal web site! I talk about personal developments,simple experiments about organisms,organisms photos,and so on." },
+            logo: { "日本語": "生物好きによる日々の小話集", "English": "" },
+            uptodate: {
+              "日本語": "最新", "English": "Up To Date"
+            },
           },
           methods: {
             getReferenceText: function (referenceId) {

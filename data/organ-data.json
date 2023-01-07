@@ -3,7 +3,7 @@
     "id": 0,
     "update_date": null,
     "posted_date": null,
-    "markdown": "# ラズベリーパイで顕微鏡カメラ作り\n顕微鏡カメラを作成したので、その過程を書き綴っていきます。\n## 作った理由\n　地衣類[^1]の粉芽[^2]をタイムラプス観察しようと思ったのですが、顕微鏡カメラを持っていません。そこで、顕微鏡の鏡筒にラズベリーパイのとカメラを取り付け、顕微鏡カメラを作ってしまおうお思いました。\n材料\n- raspberry pi zero\n- \n## 構成\n![作成した顕微鏡カメラ](data/pictures/000000000001.jpg)\n- カメラ部\n- 光源\nに分かれています。\n### カメラ部\n![カメラ部](data/pictures/000000000001.jpg)\n塩ビパイプにraspbery pi zeroとraspberry pi camera v2を装着しています。\n### 光源\n![光源裏](data/pictures/000000000001.jpg)\n![光源表](data/pictures/000000000001.jpg)\nホームセンターで買ってきたPPシートを加工し、LEDや制御用トランジスタを（2sd1815）をグルーガンで固定、空中配線をしました。\n## 試し撮り\n",
+    "markdown": "",
     "access": 0,
     "good": 0,
     "comments": {

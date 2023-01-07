@@ -320,12 +320,8 @@ footer {
       display: flex;
     }
   main{
-    width: 60%;
-    margin-left: 2.5%;
-  }
-  .side-bar{
-    width: 27.5%;
-    margin-left: 2.5%;
+    margin-left: 15%;
+    margin-right: 15%;
   }
   .article-information {
     display: flex;

@@ -150,7 +150,7 @@ function purseURL(line) {
   return line.replace(/(http(s)?:\/([\w-]+\.)+[\w-]+(\[\w-.\?%&=]*)?)/g, '<a href="$1">link</a>');
 }
 
-function purseMaekdown(markdown, main_element) {
+function purseMaekdown(markdown) {
   let pursed_lines = "";
   const safe_lines = changeToSafeString(markdown);
 
@@ -203,5 +203,5 @@ function purseMaekdown(markdown, main_element) {
     }
   }
   console.log(pursed_lines);
-  main_element.innerHTML = pursed_lines;
+  return pursed_lines;
 }

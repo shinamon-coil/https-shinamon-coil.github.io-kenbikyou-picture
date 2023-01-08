@@ -19,10 +19,9 @@ function ShowPage() {
             update_date: json[i].update_date,
             posted_date: json[i].posted_date,
             user_name: json[i].user_name,
-            title: getTitle(json[i].markdown.split("\n")),
+            title: { "English": getTitle(json[i].markdown["English"].split("\n")), "日本語": getTitle(json[i].markdown["日本語"].split("\n")), },
             microscope_pictures: json[i].microscope_pictures,
             url: "./text.html?=" + json[i].id,
-            picture_data: getPicturePathFromMarkdown(json[i].markdown.split("\n"))
           });
 
         }

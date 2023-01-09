@@ -20,7 +20,8 @@ function ShowText() {
             language: "English",
             about_site: { "日本語": "日々行っている生物関連の個人開発、簡易実験などを公開しています。良ければ参考にしてください。もちろん生物以外の記事もあります。", "English": "Welcome to my personal web site! I talk about personal developments,simple experiments about organisms,organisms photos,and so on." },
             logo: { "日本語": "生物好きによる日々の小話集", "English": "biology lover life" },
-            search: { "日本語": "検索", "English": "Search" },
+            search: { "日本語": "検索", "English": "Search" }
+
           },
           methods: {
             getReferenceText: function (referenceId) {
@@ -42,14 +43,6 @@ function ShowText() {
             }
           },
           computed: {
-            sub_titles: function () {
-              sub_titles = getSubTitles(json[textId].markdown[this.language].split("\n"));
-              return sub_titles
-            },
-            html: function () {
-              const html = purseMaekdown(json[textId].markdown[this.language].split("\n"));
-              return html
-            }
           }
 
         })

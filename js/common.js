@@ -1,3 +1,6 @@
+let searchWord = document.getElementById("search");
+searchWord.addEventListener('keydown', inputChange);
+
 function getQuery() {
   let searchQuery = document.location.search;
 
@@ -123,9 +126,9 @@ function purseImage(line) {
 }
 
 function purseTitle(line) {
-  const title = line.replace(/#/g, "").replace(/\s/g, "");
-  let sharpe_counter = 0
+  let sharpe_counter = 0;
   for (; line[sharpe_counter] === "#" && sharpe_counter < line.length; sharpe_counter++);
+  const title = line.slice(sharpe_counter + 1)
   let tag = String(sharpe_counter);
 
   const html = "<h" + tag + ' id="' + title + '"' + ">" + title + "</h" + tag + ">"
@@ -202,6 +205,5 @@ function purseMaekdown(markdown) {
         break;
     }
   }
-  console.log(pursed_lines);
   return pursed_lines;
 }
